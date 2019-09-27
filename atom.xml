@@ -5,9 +5,9 @@
   <subtitle>一个热爱技术的玩家</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://sudlivre.github.io/"/>
   <updated>2019-09-27T11:13:06.796Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://sudlivre.github.io/</id>
   
   <author>
     <name>Sudlivre</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/09/27/hello-world/"/>
-    <id>http://yoursite.com/2019/09/27/hello-world/</id>
+    <link href="https://sudlivre.github.io/2019/09/27/hello-world/"/>
+    <id>https://sudlivre.github.io/2019/09/27/hello-world/</id>
     <published>2019-09-27T11:13:06.796Z</published>
     <updated>2019-09-27T11:13:06.796Z</updated>
     
