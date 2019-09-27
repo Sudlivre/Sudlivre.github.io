@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Automatic Remote Desktop]]></title>
+    <url>%2F2019%2F09%2F27%2FAutomatic-Remote-Desktop%2F</url>
+    <content type="text"><![CDATA[Automatic remote desktopBased on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client&quot; /v AuthenticationLevelOverride /t REG_DWORD /d 0 /fREM Modify group policyREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly&quot; /v 1 /t RED_SZ /d TERMSRV/* /fREM Update group policygpupdate /forceREM Add login credentialsCMDKEY /add:remote_ip /user:user /pass:passwordREM Remote desktopMSTSC /v:remote_ip:remote_port start the script by command1PsExec.exe \\ip -accepteula -u user -p password -i cmd or use query user find ID1PsExec.exe \\ip -accepteula -u user -p password -i ID cmd About wmic open remote desktop service1wmic /node:&quot;[full machine name]&quot; /USER:&quot;[domain]\[username]&quot; PATH win32_terminalservicesetting WHERE (__Class!=&quot;&quot;) CALL SetAllowTSConnections 1 use wmic open remote process1wmic /node:ip /user:&quot;administrator&quot; /password:&quot;password&quot; process call create commandline=&quot;command&quot;]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>PsExec</tag>
+        <tag>bat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F09%2F27%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>

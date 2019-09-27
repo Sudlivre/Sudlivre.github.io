@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sudlivre.github.io/"/>
-  <updated>2019-09-27T11:13:06.796Z</updated>
+  <updated>2019-09-27T14:26:58.351Z</updated>
   <id>https://sudlivre.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Automatic Remote Desktop</title>
+    <link href="https://sudlivre.github.io/2019/09/27/Automatic-Remote-Desktop/"/>
+    <id>https://sudlivre.github.io/2019/09/27/Automatic-Remote-Desktop/</id>
+    <published>2019-09-27T14:23:47.000Z</published>
+    <updated>2019-09-27T14:26:58.351Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Automatic-remote-desktop"><a href="#Automatic-remote-desktop" class="headerlink" title="Automatic remote desktop"></a>Automatic remote desktop</h1><p>Based on Windows Server 2012</p><p><strong>premise</strong> </p><ul><li>remote machine need open winrm service </li><li>base host need PsExec.exe for start up display</li></ul><p>bat script<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">REM Skip popup</span><br><span class="line">REG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client&quot; /v AuthenticationLevelOverride /t REG_DWORD /d 0 /f</span><br><span class="line">REM Modify group policy</span><br><span class="line">REG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly&quot; /v 1 /t RED_SZ /d TERMSRV/* /f</span><br><span class="line">REM Update group policy</span><br><span class="line">gpupdate /force</span><br><span class="line">REM Add login credentials</span><br><span class="line">CMDKEY /add:remote_ip /user:user /pass:password</span><br><span class="line">REM Remote desktop</span><br><span class="line">MSTSC /v:remote_ip:remote_port</span><br></pre></td></tr></table></figure></p><a id="more"></a><p>start the script by command<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PsExec.exe \\ip -accepteula -u user -p password -i cmd</span><br></pre></td></tr></table></figure></p><p>or use <code>query user</code> find ID<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PsExec.exe \\ip -accepteula -u user -p password -i ID cmd</span><br></pre></td></tr></table></figure></p><p><strong>About wmic</strong></p><p>open remote desktop service<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic /node:&quot;[full machine name]&quot; /USER:&quot;[domain]\[username]&quot; PATH win32_terminalservicesetting WHERE (__Class!=&quot;&quot;) CALL SetAllowTSConnections 1</span><br></pre></td></tr></table></figure></p><p>use wmic open remote process<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic /node:ip /user:&quot;administrator&quot; /password:&quot;password&quot; process call create commandline=&quot;command&quot;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Automatic-remote-desktop&quot;&gt;&lt;a href=&quot;#Automatic-remote-desktop&quot; class=&quot;headerlink&quot; title=&quot;Automatic remote desktop&quot;&gt;&lt;/a&gt;Automatic remote desktop&lt;/h1&gt;&lt;p&gt;Based on Windows Server 2012&lt;/p&gt;&lt;p&gt;&lt;strong&gt;premise&lt;/strong&gt; &lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;remote machine need open winrm service &lt;/li&gt;
+&lt;li&gt;base host need PsExec.exe for start up display&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;bat script&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;REM Skip popup&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REG ADD &amp;quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client&amp;quot; /v AuthenticationLevelOverride /t REG_DWORD /d 0 /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REM Modify group policy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REG ADD &amp;quot;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly&amp;quot; /v 1 /t RED_SZ /d TERMSRV/* /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REM Update group policy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gpupdate /force&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REM Add login credentials&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CMDKEY /add:remote_ip /user:user /pass:password&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;REM Remote desktop&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;MSTSC /v:remote_ip:remote_port&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Windows" scheme="https://sudlivre.github.io/categories/Windows/"/>
+    
+    
+      <category term="PsExec" scheme="https://sudlivre.github.io/tags/PsExec/"/>
+    
+      <category term="bat" scheme="https://sudlivre.github.io/tags/bat/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
