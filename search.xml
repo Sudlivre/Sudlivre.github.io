@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Golang基础语法之二]]></title>
+    <url>%2F2019%2F09%2F28%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BA%8C%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Golang Days</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Golang基础语法之一]]></title>
+    <url>%2F2019%2F09%2F28%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[Start golangHello World123456789package mainimport "fmt"func main() &#123; fmt.Println("Hello World") // Print 不换行 fmt.Print("Go Go Go!!!")&#125; Run12345go rungo buildgo install go help123456789101112131415161718192021go helpThe commands are: bug start a bug report build compile packages and dependencies clean remove object files and cached files doc show documentation for package or symbol env print Go environment information fix update packages to use new APIs fmt gofmt (reformat) package sources generate generate Go files by processing source get add dependencies to current module and install them install compile and install packages and dependencies list list packages or modules mod module maintenance run compile and run Go program test test packages tool run specified go tool version print Go version vet report likely mistakes in packages 变量 静态语言：强类型语言 动态语言：弱类型语言 go语言特性 1234567var num intnum = 3var num2 = 4// 类型推断var name = "string"// 简短定义num := 100 变量必须先定义才能使用。 变量的类型和赋值必须一致。 同一个作用域内，变量名不能冲突。 简短定义方式，左边的变量名至少有一个是新的。 简短定义的方式，不能定义全局变量。 变量的零值。也叫默认值。 变量定义了就要使用否则无法通过编译。 常量123456789101112// 显式类型定义const b string = “abc”// 隐式类型定义const b = “abc”const ( a int = 100 b c string = "go" d e) 一组常量中，如果某个常量没有初始值，默认和上一行一致 iota12345const ( a = iota // 0 b = iota // 1 c = iota // 2) 数据类型基本数据类型： 布尔类型 数值类型 字符串 符合数据类型： array slice map function pointer struct interface channel 运算符 算术运算符 关系运算符 逻辑运算符 — / &amp;&amp; / || / ! / 位运算符 / 按位&amp; / 按位| / 异或^ / 位清空&amp;^ / 左移运算&lt;&lt; / 右移运算 &gt;&gt; / 赋值运算符]]></content>
+      <categories>
+        <category>Golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Golang Days</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Automatic Remote Desktop]]></title>
     <url>%2F2019%2F09%2F27%2FAutomatic-Remote-Desktop%2F</url>
     <content type="text"><![CDATA[Automatic remote desktopBased on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client&quot; /v AuthenticationLevelOverride /t REG_DWORD /d 0 /fREM Modify group policyREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly&quot; /v 1 /t RED_SZ /d TERMSRV/* /fREM Update group policygpupdate /forceREM Add login credentialsCMDKEY /add:remote_ip /user:user /pass:passwordREM Remote desktopMSTSC /v:remote_ip:remote_port start the script by command1PsExec.exe \\ip -accepteula -u user -p password -i cmd or use query user find ID1PsExec.exe \\ip -accepteula -u user -p password -i ID cmd About wmic open remote desktop service1wmic /node:&quot;[full machine name]&quot; /USER:&quot;[domain]\[username]&quot; PATH win32_terminalservicesetting WHERE (__Class!=&quot;&quot;) CALL SetAllowTSConnections 1 use wmic open remote process1wmic /node:ip /user:&quot;administrator&quot; /password:&quot;password&quot; process call create commandline=&quot;command&quot;]]></content>

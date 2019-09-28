@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sudlivre.github.io/"/>
-  <updated>2019-09-27T14:26:58.351Z</updated>
+  <updated>2019-09-28T08:41:44.047Z</updated>
   <id>https://sudlivre.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Golang基础语法之二</title>
+    <link href="https://sudlivre.github.io/2019/09/28/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BA%8C/"/>
+    <id>https://sudlivre.github.io/2019/09/28/Golang基础语法之二/</id>
+    <published>2019-09-28T08:41:18.000Z</published>
+    <updated>2019-09-28T08:41:44.047Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Golang" scheme="https://sudlivre.github.io/categories/Golang/"/>
+    
+    
+      <category term="Golang" scheme="https://sudlivre.github.io/tags/Golang/"/>
+    
+      <category term="Golang Days" scheme="https://sudlivre.github.io/tags/Golang-Days/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Golang基础语法之一</title>
+    <link href="https://sudlivre.github.io/2019/09/28/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%B8%80/"/>
+    <id>https://sudlivre.github.io/2019/09/28/Golang基础语法之一/</id>
+    <published>2019-09-28T00:26:25.000Z</published>
+    <updated>2019-09-28T08:40:04.393Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Start-golang"><a href="#Start-golang" class="headerlink" title="Start golang"></a>Start golang</h2><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"fmt"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">"Hello World"</span>)</span><br><span class="line">    <span class="comment">// Print 不换行</span></span><br><span class="line">    fmt.Print(<span class="string">"Go Go Go!!!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">go run</span><br><span class="line"></span><br><span class="line">go build</span><br><span class="line"></span><br><span class="line">go install</span><br></pre></td></tr></table></figure><h3 id="go-help"><a href="#go-help" class="headerlink" title="go help"></a>go help</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">go help</span><br><span class="line"></span><br><span class="line">The commands are:</span><br><span class="line"></span><br><span class="line">        bug         start a bug report</span><br><span class="line">        build       compile packages and dependencies</span><br><span class="line">        clean       remove object files and cached files</span><br><span class="line">        doc         show documentation for package or symbol</span><br><span class="line">        env         print Go environment information</span><br><span class="line">        fix         update packages to use new APIs</span><br><span class="line">        fmt         gofmt (reformat) package sources</span><br><span class="line">        generate    generate Go files by processing source</span><br><span class="line">        get         add dependencies to current module and install them</span><br><span class="line">        install     compile and install packages and dependencies</span><br><span class="line">        list        list packages or modules</span><br><span class="line">        mod         module maintenance</span><br><span class="line">        run         compile and run Go program</span><br><span class="line">        test        test packages</span><br><span class="line">        tool        run specified go tool</span><br><span class="line">        version     print Go version</span><br><span class="line">        vet         report likely mistakes in packages</span><br></pre></td></tr></table></figure><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul><li>静态语言：强类型语言</li><li>动态语言：弱类型语言</li></ul><p>go语言特性</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num <span class="keyword">int</span></span><br><span class="line">num = <span class="number">3</span></span><br><span class="line"><span class="keyword">var</span> num2 = <span class="number">4</span></span><br><span class="line"><span class="comment">// 类型推断</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">"string"</span></span><br><span class="line"><span class="comment">// 简短定义</span></span><br><span class="line">num := <span class="number">100</span></span><br></pre></td></tr></table></figure><blockquote><ul><li>变量必须先定义才能使用。</li><li>变量的类型和赋值必须一致。</li><li>同一个作用域内，变量名不能冲突。</li><li>简短定义方式，左边的变量名至少有一个是新的。</li><li>简短定义的方式，不能定义全局变量。</li><li>变量的零值。也叫默认值。</li><li>变量定义了就要使用否则无法通过编译。</li></ul></blockquote><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 显式类型定义</span></span><br><span class="line"><span class="keyword">const</span> b <span class="keyword">string</span> = “abc”</span><br><span class="line"><span class="comment">// 隐式类型定义</span></span><br><span class="line"><span class="keyword">const</span> b = “abc”</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    a <span class="keyword">int</span> = <span class="number">100</span></span><br><span class="line">    b</span><br><span class="line">    c <span class="keyword">string</span> = <span class="string">"go"</span></span><br><span class="line">    d</span><br><span class="line">    e</span><br><span class="line">)</span><br></pre></td></tr></table></figure><blockquote><p>一组常量中，如果某个常量没有初始值，默认和上一行一致</p></blockquote><h3 id="iota"><a href="#iota" class="headerlink" title="iota"></a>iota</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> (</span><br><span class="line">    a = <span class="literal">iota</span> <span class="comment">// 0</span></span><br><span class="line">    b = <span class="literal">iota</span> <span class="comment">// 1</span></span><br><span class="line">    c = <span class="literal">iota</span> <span class="comment">// 2</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>基本数据类型：</p><ul><li>布尔类型</li><li>数值类型</li><li>字符串</li></ul><p>符合数据类型：</p><ul><li>array</li><li>slice</li><li>map</li><li>function</li><li>pointer</li><li>struct</li><li>interface</li><li>channel</li></ul><h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul><li>算术运算符</li><li>关系运算符</li><li>逻辑运算符  —  / &amp;&amp; / || / ! /</li><li>位运算符 / 按位&amp; / 按位| / 异或^ / 位清空&amp;^ / 左移运算&lt;&lt; / 右移运算 &gt;&gt; /  </li><li>赋值运算符</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Start-golang&quot;&gt;&lt;a href=&quot;#Start-golang&quot; class=&quot;headerlink&quot; title=&quot;Start golang&quot;&gt;&lt;/a&gt;Start golang&lt;/h2&gt;&lt;h3 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h3&gt;&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; main&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fmt.Println(&lt;span class=&quot;string&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Print 不换行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fmt.Print(&lt;span class=&quot;string&quot;&gt;&quot;Go Go Go!!!&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Golang" scheme="https://sudlivre.github.io/categories/Golang/"/>
+    
+    
+      <category term="Golang" scheme="https://sudlivre.github.io/tags/Golang/"/>
+    
+      <category term="Golang Days" scheme="https://sudlivre.github.io/tags/Golang-Days/"/>
+    
+  </entry>
   
   <entry>
     <title>Automatic Remote Desktop</title>
