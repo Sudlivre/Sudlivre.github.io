@@ -8,18 +8,16 @@ categories:
 - Windows
 ---
 
-# Automatic remote desktop
-
 Based on Windows Server 2012
 
-**premise** 
+### premise
 
-- remote machine need open winrm service 
+- remote machine need open winrm service
 - base host need PsExec.exe for start up display
 
+### bat script
 
-bat script
-```
+```bat
 REM Skip popup
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client" /v AuthenticationLevelOverride /t REG_DWORD /d 0 /f
 REM Modify group policy
@@ -31,23 +29,29 @@ CMDKEY /add:remote_ip /user:user /pass:password
 REM Remote desktop
 MSTSC /v:remote_ip:remote_port
 ```
-start the script by command
-```
+
+### start the script by command
+
+```bat
 PsExec.exe \\ip -accepteula -u user -p password -i cmd
 ```
+
 or use `query user` find ID
-```
+
+```bat
 PsExec.exe \\ip -accepteula -u user -p password -i ID cmd
 ```
 
-**About wmic**
+### About wmic
 
 open remote desktop service
-```
+
+```bat
 wmic /node:"[full machine name]" /USER:"[domain]\[username]" PATH win32_terminalservicesetting WHERE (__Class!="") CALL SetAllowTSConnections 1
 ```
+
 use wmic open remote process
-```
+
+```bat
 wmic /node:ip /user:"administrator" /password:"password" process call create commandline="command"
 ```
-
