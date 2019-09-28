@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows Server 2012 R2 FTP Server]]></title>
+    <url>%2F2019%2F09%2F28%2FWindows-Server-2012-R2-FTP-Server%2F</url>
+    <content type="text"><![CDATA[打开Windows Server 2012 R2 服务器管理器界面 添加角色和功能添加角色和功能向导里，选择 从服务器池中选择服务器选择Web 服务器（IIS）安装 FTP服务器安装完成后，在服务器管理器右上角有个点击 “工具”–&gt;选择“IIS管理器”点击IIS 服务器证书FTP界面上选择“FTP身份验证”——&gt;“基本身份验证”–&gt;”启用” FTP界面选择 “FTP授权规则“—&gt;右侧“添加允许规则”–&gt;选择“指定的角色或用户组”,以及权限选择，“读取 写入 完成所有前戏后，接下来就开始进行建立FTP网站，点击IIS管理器界面 “网站”，点击右侧添加“FTP站点”，FTP站点名称可以任意取，内容目录为服务器上提供上传、下载文件保存目录。 点击“下一步”绑定IP可以选取指定IP，也可以默认，端口号默认21，勾选下面“自动启动FTP站点”导入刚才建立的SSL证书 点击“下一步”身份验证和授权信息配置 配置完成（浏览器和FTP客户端软件上登陆） 123ftp://ip# 提示输入账户密码]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>FTP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Golang基础语法之二]]></title>
     <url>%2F2019%2F09%2F28%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BA%8C%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;x, &amp;y) 阻塞式fmt.Scanf("%d, %f", &amp;x, &amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadString('\n')*/ if语句1234567if 布尔表达式1 &#123; 执行语句&#125; else if 布尔表达式2 &#123; 执行语句&#125; else &#123; 执行语句&#125; if语句其他写法 12345if num := 4; num &gt; 0 &#123; fmt.Println(num)&#125;// 作用域在if语句里面// fmt.Println(num) // undefined: num switch分支语句12345678switch var1 &#123; case val1: ... case val2: ... default: ...&#125; switch其他写法 1234567891011121314151617181920switch &#123; // 直接作用在true上 case true: fmt.Println("true") case false: fmt.Println("false")&#125;switch var1 &#123; case val1, val2, val3: fmt.Println("true") case val4: fmt.Println("false")&#125;switch var1 := "go"; var1 &#123; // 作用域在switch中 case val1, val2, val3: fmt.Println("true") case val4: fmt.Println("false")&#125; fallthrough: 用于穿透switch，会执行该case后面case的内容，fallthrough在case最后一行 for循环123for init; condition; post &#123;&#125; for语句的其他写法 1234567for condition &#123;&#125; // 相当与while循环for &#123;&#125;for key, value := range oldMap &#123; newMap[key] = value&#125; break 跳出循环体 continue 跳出一次循环 goto1234goto label....label:]]></content>
       <categories>
         <category>Golang</category>
       </categories>
@@ -27,7 +38,7 @@
   <entry>
     <title><![CDATA[Automatic Remote Desktop]]></title>
     <url>%2F2019%2F09%2F27%2FAutomatic-Remote-Desktop%2F</url>
-    <content type="text"><![CDATA[Automatic remote desktopBased on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client&quot; /v AuthenticationLevelOverride /t REG_DWORD /d 0 /fREM Modify group policyREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly&quot; /v 1 /t RED_SZ /d TERMSRV/* /fREM Update group policygpupdate /forceREM Add login credentialsCMDKEY /add:remote_ip /user:user /pass:passwordREM Remote desktopMSTSC /v:remote_ip:remote_port start the script by command1PsExec.exe \\ip -accepteula -u user -p password -i cmd or use query user find ID1PsExec.exe \\ip -accepteula -u user -p password -i ID cmd About wmic open remote desktop service1wmic /node:&quot;[full machine name]&quot; /USER:&quot;[domain]\[username]&quot; PATH win32_terminalservicesetting WHERE (__Class!=&quot;&quot;) CALL SetAllowTSConnections 1 use wmic open remote process1wmic /node:ip /user:&quot;administrator&quot; /password:&quot;password&quot; process call create commandline=&quot;command&quot;]]></content>
+    <content type="text"><![CDATA[Based on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client" /v AuthenticationLevelOverride /t REG_DWORD /d 0 /fREM Modify group policyREG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly" /v 1 /t RED_SZ /d TERMSRV/* /fREM Update group policygpupdate /forceREM Add login credentialsCMDKEY /add:remote_ip /user:user /pass:passwordREM Remote desktopMSTSC /v:remote_ip:remote_port start the script by command1PsExec.exe \\ip -accepteula -u user -p password -i cmd or use query user find ID 1PsExec.exe \\ip -accepteula -u user -p password -i ID cmd About wmicopen remote desktop service 1wmic /node:"[full machine name]" /USER:"[domain]\[username]" PATH win32_terminalservicesetting WHERE (__Class!="") CALL SetAllowTSConnections 1 use wmic open remote process 1wmic /node:ip /user:"administrator" /password:"password" process call create commandline="command"]]></content>
       <categories>
         <category>Windows</category>
       </categories>
@@ -39,6 +50,6 @@
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F09%2F27%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1hexo new "My New Post" More info: Writing Run server1hexo server More info: Server Generate static files1hexo generate More info: Generating Deploy to remote sites1hexo deploy More info: Deployment]]></content>
   </entry>
 </search>

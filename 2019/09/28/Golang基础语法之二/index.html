@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
+  <meta name="description" content="输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;amp;x, &amp;amp;y) 阻塞式fmt.Scanf(&quot;%d, %f&quot;, &amp;amp;x, &amp;amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadSt">
 <meta name="keywords" content="Golang,Golang Days">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Golang基础语法之二">
 <meta property="og:url" content="https://sudlivre.github.io/2019/09/28/Golang基础语法之二/index.html">
 <meta property="og:site_name" content="南書兮">
-<meta property="og:description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
+<meta property="og:description" content="输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;amp;x, &amp;amp;y) 阻塞式fmt.Scanf(&quot;%d, %f&quot;, &amp;amp;x, &amp;amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadSt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-28T08:41:44.047Z">
+<meta property="og:updated_time" content="2019-09-28T12:01:44.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Golang基础语法之二">
-<meta name="twitter:description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
+<meta name="twitter:description" content="输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;amp;x, &amp;amp;y) 阻塞式fmt.Scanf(&quot;%d, %f&quot;, &amp;amp;x, &amp;amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadSt">
   <link rel="canonical" href="https://sudlivre.github.io/2019/09/28/Golang基础语法之二/">
 
 
@@ -302,7 +302,7 @@
                 
               
 
-              <time title="创建时间：2019-09-28 16:41:18 / 修改时间：16:41:44" itemprop="dateCreated datePublished" datetime="2019-09-28T16:41:18+08:00">2019-09-28</time>
+              <time title="创建时间：2019-09-28 16:41:18 / 修改时间：20:01:44" itemprop="dateCreated datePublished" datetime="2019-09-28T16:41:18+08:00">2019-09-28</time>
             </span>
           
             
@@ -334,7 +334,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h2 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h2><p>输出：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Print() // 打印</span></span><br><span class="line"><span class="comment">Printf() // 格式化打印</span></span><br><span class="line"><span class="comment">Println() // 打印之后换行</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><p>输入：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">fmt.Scanln(&amp;x, &amp;y) 阻塞式</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">fmt.Scanf("%d, %f", &amp;x, &amp;y)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">reader := bufio.NewReader(os.Stdin)</span></span><br><span class="line"><span class="comment">s, _ := reader.ReadString('\n')</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式<span class="number">1</span> &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> 布尔表达式<span class="number">2</span> &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>if语句其他写法</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> num := <span class="number">4</span>; num &gt; <span class="number">0</span> &#123;</span><br><span class="line">    fmt.Println(num)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 作用域在if语句里面</span></span><br><span class="line"><span class="comment">// fmt.Println(num) // undefined: num</span></span><br></pre></td></tr></table></figure>
+<h2 id="switch分支语句"><a href="#switch分支语句" class="headerlink" title="switch分支语句"></a>switch分支语句</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> var1 &#123;</span><br><span class="line">    <span class="keyword">case</span> val1:</span><br><span class="line">        ...</span><br><span class="line">    <span class="keyword">case</span> val2:</span><br><span class="line">        ...</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>switch其他写法</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> &#123; <span class="comment">// 直接作用在true上</span></span><br><span class="line">    <span class="keyword">case</span> <span class="literal">true</span>:</span><br><span class="line">        fmt.Println(<span class="string">"true"</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="literal">false</span>:</span><br><span class="line">        fmt.Println(<span class="string">"false"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> var1 &#123;</span><br><span class="line">    <span class="keyword">case</span> val1, val2, val3:</span><br><span class="line">        fmt.Println(<span class="string">"true"</span>)</span><br><span class="line">    <span class="keyword">case</span> val4:</span><br><span class="line">        fmt.Println(<span class="string">"false"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> var1 := <span class="string">"go"</span>; var1 &#123; <span class="comment">// 作用域在switch中</span></span><br><span class="line">    <span class="keyword">case</span> val1, val2, val3:</span><br><span class="line">        fmt.Println(<span class="string">"true"</span>)</span><br><span class="line">    <span class="keyword">case</span> val4:</span><br><span class="line">        fmt.Println(<span class="string">"false"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>fallthrough: 用于穿透switch，会执行该case后面case的内容，fallthrough在case最后一行</p>
+</blockquote>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> init; condition; post &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for语句的其他写法</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> condition &#123;&#125; <span class="comment">// 相当与while循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value := <span class="keyword">range</span> oldMap &#123;</span><br><span class="line">    newMap[key] = value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>break 跳出循环体</li>
+<li>continue 跳出一次循环</li>
+</ul>
+<h2 id="goto"><a href="#goto" class="headerlink" title="goto"></a>goto</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">goto</span> label</span><br><span class="line">..</span><br><span class="line">..</span><br><span class="line">label:</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -387,6 +408,10 @@
 
             <div class="post-nav-prev post-nav-item">
               
+                <a href="/2019/09/28/Windows-Server-2012-R2-FTP-Server/" rel="prev" title="Windows Server 2012 R2 FTP Server">
+                  Windows Server 2012 R2 FTP Server <i class="fa fa-chevron-right"></i>
+                </a>
+              
             </div>
           </div>
         
@@ -437,6 +462,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入和输出"><span class="nav-number">1.</span> <span class="nav-text">输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if语句"><span class="nav-number">2.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch分支语句"><span class="nav-number">3.</span> <span class="nav-text">switch分支语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环"><span class="nav-number">4.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#goto"><span class="nav-number">5.</span> <span class="nav-text">goto</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -453,7 +480,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -479,7 +506,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
