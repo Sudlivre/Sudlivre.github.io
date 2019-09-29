@@ -57,19 +57,19 @@
   };
 </script>
 
-  <meta name="description" content="输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;amp;x, &amp;amp;y) 阻塞式fmt.Scanf(&quot;%d, %f&quot;, &amp;amp;x, &amp;amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadSt">
+  <meta name="description" content="指针定义指针1234567a := 10 // 实际变量var b *int // 声名指针变量b = &amp;amp;a // 指针变量指向a的内存地址// 指针的指针var c **intc = &amp;amp;b数组指针数组指针：存储数组的地址*[4]int指针数组：存储的数据类型是指针[4]*int函数指针">
 <meta name="keywords" content="Golang,Golang Days">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Golang基础语法之二">
-<meta property="og:url" content="https://sudlivre.github.io/2019/09/28/Golang基础语法之二/index.html">
+<meta property="og:title" content="Golang基础语法之五">
+<meta property="og:url" content="https://sudlivre.github.io/2019/09/29/Golang基础语法之五/index.html">
 <meta property="og:site_name" content="南書兮">
-<meta property="og:description" content="输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;amp;x, &amp;amp;y) 阻塞式fmt.Scanf(&quot;%d, %f&quot;, &amp;amp;x, &amp;amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadSt">
+<meta property="og:description" content="指针定义指针1234567a := 10 // 实际变量var b *int // 声名指针变量b = &amp;amp;a // 指针变量指向a的内存地址// 指针的指针var c **intc = &amp;amp;b数组指针数组指针：存储数组的地址*[4]int指针数组：存储的数据类型是指针[4]*int函数指针">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-28T12:01:44.550Z">
+<meta property="og:updated_time" content="2019-09-29T12:10:13.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Golang基础语法之二">
-<meta name="twitter:description" content="输入和输出输出：12345/*Print() // 打印Printf() // 格式化打印Println() // 打印之后换行*/输入：12345678/*fmt.Scanln(&amp;amp;x, &amp;amp;y) 阻塞式fmt.Scanf(&quot;%d, %f&quot;, &amp;amp;x, &amp;amp;y)reader := bufio.NewReader(os.Stdin)s, _ := reader.ReadSt">
-  <link rel="canonical" href="https://sudlivre.github.io/2019/09/28/Golang基础语法之二/">
+<meta name="twitter:title" content="Golang基础语法之五">
+<meta name="twitter:description" content="指针定义指针1234567a := 10 // 实际变量var b *int // 声名指针变量b = &amp;amp;a // 指针变量指向a的内存地址// 指针的指针var c **intc = &amp;amp;b数组指针数组指针：存储数组的地址*[4]int指针数组：存储的数据类型是指针[4]*int函数指针">
+  <link rel="canonical" href="https://sudlivre.github.io/2019/09/29/Golang基础语法之五/">
 
 
 <script id="page-configurations">
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title>Golang基础语法之二 | 南書兮</title>
+  <title>Golang基础语法之五 | 南書兮</title>
   
 
 
@@ -274,7 +274,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://sudlivre.github.io/2019/09/28/Golang基础语法之二/">
+    <link itemprop="mainEntityOfPage" href="https://sudlivre.github.io/2019/09/29/Golang基础语法之五/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sudlivre">
@@ -286,7 +286,7 @@
       <meta itemprop="name" content="南書兮">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Golang基础语法之二
+        <h1 class="post-title" itemprop="name headline">Golang基础语法之五
 
           
         </h1>
@@ -302,7 +302,7 @@
                 
               
 
-              <time title="创建时间：2019-09-28 16:41:18 / 修改时间：20:01:44" itemprop="dateCreated datePublished" datetime="2019-09-28T16:41:18+08:00">2019-09-28</time>
+              <time title="创建时间：2019-09-29 17:03:35 / 修改时间：20:10:13" itemprop="dateCreated datePublished" datetime="2019-09-29T17:03:35+08:00">2019-09-29</time>
             </span>
           
             
@@ -334,27 +334,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h2><p>输出：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Print() // 打印</span></span><br><span class="line"><span class="comment">Printf() // 格式化打印</span></span><br><span class="line"><span class="comment">Println() // 打印之后换行</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><p>输入：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">fmt.Scanln(&amp;x, &amp;y) 阻塞式</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">fmt.Scanf("%d, %f", &amp;x, &amp;y)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">reader := bufio.NewReader(os.Stdin)</span></span><br><span class="line"><span class="comment">s, _ := reader.ReadString('\n')</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><a id="more"></a>
+        <h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="定义指针"><a href="#定义指针" class="headerlink" title="定义指针"></a>定义指针</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a := <span class="number">10</span> <span class="comment">// 实际变量</span></span><br><span class="line"><span class="keyword">var</span> b *<span class="keyword">int</span> <span class="comment">// 声名指针变量</span></span><br><span class="line">b = &amp;a <span class="comment">// 指针变量指向a的内存地址</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 指针的指针</span></span><br><span class="line"><span class="keyword">var</span> c **<span class="keyword">int</span></span><br><span class="line">c = &amp;b</span><br></pre></td></tr></table></figure><h3 id="数组指针"><a href="#数组指针" class="headerlink" title="数组指针"></a>数组指针</h3><p>数组指针：存储数组的地址<br><code>*[4]int</code></p><p>指针数组：存储的数据类型是指针<br><code>[4]*int</code></p><h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><a id="more"></a>
 
 
-
-<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 布尔表达式<span class="number">1</span> &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> 布尔表达式<span class="number">2</span> &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>if语句其他写法</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> num := <span class="number">4</span>; num &gt; <span class="number">0</span> &#123;</span><br><span class="line">    fmt.Println(num)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 作用域在if语句里面</span></span><br><span class="line"><span class="comment">// fmt.Println(num) // undefined: num</span></span><br></pre></td></tr></table></figure>
-<h2 id="switch分支语句"><a href="#switch分支语句" class="headerlink" title="switch分支语句"></a>switch分支语句</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> var1 &#123;</span><br><span class="line">    <span class="keyword">case</span> val1:</span><br><span class="line">        ...</span><br><span class="line">    <span class="keyword">case</span> val2:</span><br><span class="line">        ...</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>switch其他写法</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> &#123; <span class="comment">// 直接作用在true上</span></span><br><span class="line">    <span class="keyword">case</span> <span class="literal">true</span>:</span><br><span class="line">        fmt.Println(<span class="string">"true"</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="literal">false</span>:</span><br><span class="line">        fmt.Println(<span class="string">"false"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> var1 &#123;</span><br><span class="line">    <span class="keyword">case</span> val1, val2, val3:</span><br><span class="line">        fmt.Println(<span class="string">"true"</span>)</span><br><span class="line">    <span class="keyword">case</span> val4:</span><br><span class="line">        fmt.Println(<span class="string">"false"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> var1 := <span class="string">"go"</span>; var1 &#123; <span class="comment">// 作用域在switch中</span></span><br><span class="line">    <span class="keyword">case</span> val1, val2, val3:</span><br><span class="line">        fmt.Println(<span class="string">"true"</span>)</span><br><span class="line">    <span class="keyword">case</span> val4:</span><br><span class="line">        fmt.Println(<span class="string">"false"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>fallthrough: 用于穿透switch，会执行该case后面case的内容，fallthrough在case最后一行</p>
-</blockquote>
-<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> init; condition; post &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>for语句的其他写法</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> condition &#123;&#125; <span class="comment">// 相当与while循环</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> key, value := <span class="keyword">range</span> oldMap &#123;</span><br><span class="line">    newMap[key] = value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>break 跳出循环体</li>
-<li>continue 跳出一次循环</li>
-</ul>
-<h2 id="goto"><a href="#goto" class="headerlink" title="goto"></a>goto</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">goto</span> label</span><br><span class="line">..</span><br><span class="line">..</span><br><span class="line">label:</span><br></pre></td></tr></table></figure>
+<p>函数指针：函数默认是一个指针，没有*</p>
+<p>指针函数：函数的返回值是一个指针</p>
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><h3 id="定义结构体"><a href="#定义结构体" class="headerlink" title="定义结构体"></a>定义结构体</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    age <span class="keyword">int</span></span><br><span class="line">    sex <span class="keyword">string</span></span><br><span class="line">    address <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = Person</span><br><span class="line">p1.name = <span class="string">"xiaosi"</span></span><br><span class="line">p1.age = <span class="number">24</span></span><br><span class="line">p1.sex = <span class="string">"girl"</span></span><br><span class="line">p1.address = <span class="string">"cq"</span></span><br><span class="line"></span><br><span class="line">p2 := Person&#123;&#125;</span><br><span class="line"></span><br><span class="line">p3 := Person&#123;name: <span class="string">"jjj"</span>, ...&#125;</span><br><span class="line"></span><br><span class="line">p4 := Person&#123;<span class="string">"jj"</span>, <span class="number">24</span>, <span class="string">"girl"</span>, <span class="string">"cq"</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h3><p>结构体是值类型数据结构， 深拷贝</p>
+<p>可以定义结构体指针进行浅拷贝<code>var pp1 *Person</code></p>
+<h3 id="new操作"><a href="#new操作" class="headerlink" title="new操作"></a>new操作</h3><p>创建某种类型的指针的函数，<code>p1 := new(Person)</code> 返回指针</p>
+<h3 id="匿名结构体"><a href="#匿名结构体" class="headerlink" title="匿名结构体"></a>匿名结构体</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s3 := <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    age <span class="keyword">int</span></span><br><span class="line">&#125;&#123;</span><br><span class="line">    name <span class="string">"xs"</span></span><br><span class="line">    age <span class="number">24</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="匿名字段"><a href="#匿名字段" class="headerlink" title="匿名字段"></a>匿名字段</h3><p>不写字段名，默认类型作为字段，类型不能重复</p>
+<h3 id="结构体嵌套"><a href="#结构体嵌套" class="headerlink" title="结构体嵌套"></a>结构体嵌套</h3><p>一个结构体中的字段，是另一个结构体类型</p>
 
     </div>
 
@@ -371,7 +362,7 @@
     <strong>本文作者： </strong>Sudlivre</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sudlivre.github.io/2019/09/28/Golang基础语法之二/" title="Golang基础语法之二">https://sudlivre.github.io/2019/09/28/Golang基础语法之二/</a>
+    <a href="https://sudlivre.github.io/2019/09/29/Golang基础语法之五/" title="Golang基础语法之五">https://sudlivre.github.io/2019/09/29/Golang基础语法之五/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -398,8 +389,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/28/Golang基础语法之一/" rel="next" title="Golang基础语法之一">
-                  <i class="fa fa-chevron-left"></i> Golang基础语法之一
+                <a href="/2019/09/29/Golang基础语法之四/" rel="next" title="Golang基础语法之四">
+                  <i class="fa fa-chevron-left"></i> Golang基础语法之四
                 </a>
               
             </div>
@@ -407,10 +398,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/28/Windows-Server-2012-R2-FTP-Server/" rel="prev" title="Windows Server 2012 R2 FTP Server">
-                  Windows Server 2012 R2 FTP Server <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -462,7 +449,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#输入和输出"><span class="nav-number">1.</span> <span class="nav-text">输入和输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if语句"><span class="nav-number">2.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch分支语句"><span class="nav-number">3.</span> <span class="nav-text">switch分支语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环"><span class="nav-number">4.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#goto"><span class="nav-number">5.</span> <span class="nav-text">goto</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#指针"><span class="nav-number">1.</span> <span class="nav-text">指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义指针"><span class="nav-number">1.1.</span> <span class="nav-text">定义指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组指针"><span class="nav-number">1.2.</span> <span class="nav-text">数组指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数指针"><span class="nav-number">1.3.</span> <span class="nav-text">函数指针</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构体"><span class="nav-number">2.</span> <span class="nav-text">结构体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义结构体"><span class="nav-number">2.1.</span> <span class="nav-text">定义结构体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构体指针"><span class="nav-number">2.2.</span> <span class="nav-text">结构体指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new操作"><span class="nav-number">2.3.</span> <span class="nav-text">new操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名结构体"><span class="nav-number">2.4.</span> <span class="nav-text">匿名结构体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名字段"><span class="nav-number">2.5.</span> <span class="nav-text">匿名字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构体嵌套"><span class="nav-number">2.6.</span> <span class="nav-text">结构体嵌套</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -683,7 +670,7 @@ window.addEventListener('pjax:success', () => {
       repo: 'sudlivre.github.io',
       owner: 'Sudlivre',
       admin: ['sudlivre'],
-      id: '9a5d5b7956d3c08fa79f6c26a2883509',
+      id: 'af0178cc62a10987f178713f075ffdce',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'

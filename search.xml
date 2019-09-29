@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Golang基础语法之五]]></title>
+    <url>%2F2019%2F09%2F29%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BA%94%2F</url>
+    <content type="text"><![CDATA[指针定义指针1234567a := 10 // 实际变量var b *int // 声名指针变量b = &amp;a // 指针变量指向a的内存地址// 指针的指针var c **intc = &amp;b数组指针数组指针：存储数组的地址*[4]int指针数组：存储的数据类型是指针[4]*int函数指针 函数指针：函数默认是一个指针，没有* 指针函数：函数的返回值是一个指针 结构体定义结构体123456789101112131415161718type Person struct &#123; name string age int sex string address string&#125;var p1 = Personp1.name = "xiaosi"p1.age = 24p1.sex = "girl"p1.address = "cq"p2 := Person&#123;&#125;p3 := Person&#123;name: "jjj", ...&#125;p4 := Person&#123;"jj", 24, "girl", "cq"&#125; 结构体指针结构体是值类型数据结构， 深拷贝 可以定义结构体指针进行浅拷贝var pp1 *Person new操作创建某种类型的指针的函数，p1 := new(Person) 返回指针 匿名结构体1234567s3 := struct &#123; name string age int&#125;&#123; name "xs" age 24&#125; 匿名字段不写字段名，默认类型作为字段，类型不能重复 结构体嵌套一个结构体中的字段，是另一个结构体类型]]></content>
+      <categories>
+        <category>Golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Golang Days</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Golang基础语法之四]]></title>
+    <url>%2F2019%2F09%2F29%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%9B%9B%2F</url>
+    <content type="text"><![CDATA[函数函数定义123456// 声明func FuncName() &#123; return&#125;// 调用FuncName()函数调用的实参和形参必须一一对应，顺序，个数，类型可变参数123456789func myFunc(arg ...int) &#123; for _, n := range arg &#123; fmt.Println(n) &#125;&#125;myFunc(2,3,4)s1 := []int&#123;1,2,34,5&#125;myFunc(s1...) 参数传递 值传递 传递的是参数的副本 引用传递 传递的是参数的地址 函数中变量的作用域作用域在函数中 defer延迟函数或者方法的执行，等待外围函数执行完在执行defer中的内容。 如果存在多个defer，执行defer依据类似栈结构，先进后出。 defer函数调用时，函数的参数已经传递。 当外围函数中的语句正常执行完毕时，只有其中所有的延迟函数都执行完毕，外围函数才会真正的结束执行。 当执行外围函数中的return语句时，只有其中所有的延迟函数都执行完毕后，外围函数才会真正返回。当外围函数中的代码引发运行恐慌时，只有其中所有延迟函数都执行完毕后，该运行时恐慌才会被扩展至调用函数。 匿名函数Golang支持函数式编程 1234567func () &#123; fmt.Println("aaa")&#125;()func3 = func () &#123; fmt.Println("aaa")&#125; 回调函数函数作为另一个函数的参数，发生调用。 闭包一个外层函数中，有内层函数，该内层函数中，会操作外层函数的局部变量，并且该外层函数的返回值就是这个内层函数。 这个内层函数和外层函数的局部变量，统称为闭包结构。 局部变量的生命周期会发生改变，正常的局部变量随着函数的调用而创建，随着函数的结束而销毁。但闭包结构不会随着函数的结束而销毁，因为内层函数还要继续使用。]]></content>
+      <categories>
+        <category>Golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Golang Days</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Golang基础语法之三]]></title>
     <url>%2F2019%2F09%2F29%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%B8%89%2F</url>
     <content type="text"><![CDATA[随机数伪随机数1234567891011121314151617181920package mainimport "math/rand"import "time"func main() &#123; num1 = rand.Int() num2 = rand.Intn(10) rand.Seed(1) // 设置种子数 num3 = rand.Intn(10) // 时间戳 timeStamp1 = time.Now().Unix() timeStamp2 = time.Now().UnixNano() rand.Seed(timeStamp2) // 根据时间戳设置随机种子 // 生成区间随机数 num4 = rand.Intn(5) + 5&#125; Array数组定义1234567891011var variable_name [SIZE] variable_typevar balance1 [10] float 32var balance2 = [5] floart32&#123;100.0, 2.0, 3.14, 7.0, 99.9&#125;d := [...] int&#123;1,2,3&#125;e := [5] int&#123;4: 100&#125; // [0,0,0,0,100]arrayLen := len(balance1) // 容器中已存储的数据量arrayCap := cap(balance1) // 容器中能够存储的最大的数量fmt.Printf("%p\n", &amp;balance1) // 获取数组的地址 遍历数组1234a := [...]float64&#123;5.5, 6.6&#125;for i, v := range a &#123; fmt.Println(i, v)&#125; 数组是值类型 理解为存储的数值本身 多维数组1a2 := [3][4]int&#123;&#123;1,2,3,4&#125;, &#123;5,6,7,8&#125;, &#123;9,10,11,12&#125;&#125; Slice切片定义12345678var identifier []typevar slice1 []type = make([]type, len)// 简写slice2 := make([]type, len)slice2 = append(slice2, 3, 4)slice2 = append(slice2, slice1...) // 加上...代表添加里面的元素 可以从数组初始化切片，切片是引用类型，改变数组内容，切片内容会一起改变。如果切片容量不够，会重新拷贝一份数组，这是数组改变不会影响切片内容。 深拷贝和浅拷贝 值语义 拷贝值 深拷贝 引用语义 拷贝地址 浅拷贝 MapMap通过hash表实现 使用make()函数创建，方法类似Slice。不初始化会创建一个nil map。nil map不能用来存放键值对 1234567891011var map1 map[key_type]value_type // 声明var map2 = make(map[key_type]value_type) // 声明并初始化map2[40] // key不存在获取默认值value, ok := map[key] // 判断key是否存在map[3] = 40 // key存在修改，不存在添加delete(map2, 4) // 删除键值对，不存在不影响len(map2) // 获取map长度 map是引用类型的数据类型 string语法：””, `` 123s1 := "hello中国"len(s1) // 11 获取的是字节个数 strings包使用string的方法需要导包import &quot;strings&quot; strconv包实现字符串和基本数据类型进行转换]]></content>
@@ -72,8 +96,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Automatic Remote Desktop]]></title>
-    <url>%2F2019%2F09%2F27%2FAutomatic-Remote-Desktop%2F</url>
+    <title><![CDATA[Windows Automatic Remote Desktop]]></title>
+    <url>%2F2019%2F09%2F27%2FWindows-Automatic-Remote-Desktop%2F</url>
     <content type="text"><![CDATA[Based on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client" /v AuthenticationLevelOverride /t REG_DWORD /d 0 /fREM Modify group policyREG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly" /v 1 /t RED_SZ /d TERMSRV/* /fREM Update group policygpupdate /forceREM Add login credentialsCMDKEY /add:remote_ip /user:user /pass:passwordREM Remote desktopMSTSC /v:remote_ip:remote_port start the script by command1PsExec.exe \\ip -accepteula -u user -p password -i cmd or use query user find ID 1PsExec.exe \\ip -accepteula -u user -p password -i ID cmd About wmicopen remote desktop service 1wmic /node:"[full machine name]" /USER:"[domain]\[username]" PATH win32_terminalservicesetting WHERE (__Class!="") CALL SetAllowTSConnections 1 use wmic open remote process 1wmic /node:ip /user:"administrator" /password:"password" process call create commandline="command"]]></content>
       <categories>
         <category>Windows</category>
@@ -82,10 +106,5 @@
         <tag>PsExec</tag>
         <tag>bat</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F09%2F27%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1hexo new "My New Post" More info: Writing Run server1hexo server More info: Server Generate static files1hexo generate More info: Generating Deploy to remote sites1hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
