@@ -57,19 +57,19 @@
   };
 </script>
 
-  <meta name="description" content="Based on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Micros">
-<meta name="keywords" content="PsExec,bat">
+  <meta name="description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() &amp;#123;    // file文件操作    fileInfo, err := os.Stat(&quot;aaa.txt&quot;)    if err != nil &amp;#123;        fmt.Println(&quot;error&quot;)        retur">
+<meta name="keywords" content="Golang,Golang Days">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows Automatic Remote Desktop">
-<meta property="og:url" content="https://sudlivre.github.io/2019/09/27/Windows-Automatic-Remote-Desktop/index.html">
+<meta property="og:title" content="Golang进阶实战之IO操作">
+<meta property="og:url" content="https://sudlivre.github.io/2019/10/03/Golang进阶实战之IO操作/index.html">
 <meta property="og:site_name" content="南書兮">
-<meta property="og:description" content="Based on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Micros">
+<meta property="og:description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() &amp;#123;    // file文件操作    fileInfo, err := os.Stat(&quot;aaa.txt&quot;)    if err != nil &amp;#123;        fmt.Println(&quot;error&quot;)        retur">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-29T10:29:27.855Z">
+<meta property="og:updated_time" content="2019-10-03T08:02:54.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows Automatic Remote Desktop">
-<meta name="twitter:description" content="Based on Windows Server 2012premise remote machine need open winrm service base host need PsExec.exe for start up display bat script12345678910REM Skip popupREG ADD &quot;HKEY_LOCAL_MACHINE\SOFTWARE\Micros">
-  <link rel="canonical" href="https://sudlivre.github.io/2019/09/27/Windows-Automatic-Remote-Desktop/">
+<meta name="twitter:title" content="Golang进阶实战之IO操作">
+<meta name="twitter:description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() &amp;#123;    // file文件操作    fileInfo, err := os.Stat(&quot;aaa.txt&quot;)    if err != nil &amp;#123;        fmt.Println(&quot;error&quot;)        retur">
+  <link rel="canonical" href="https://sudlivre.github.io/2019/10/03/Golang进阶实战之IO操作/">
 
 
 <script id="page-configurations">
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title>Windows Automatic Remote Desktop | 南書兮</title>
+  <title>Golang进阶实战之IO操作 | 南書兮</title>
   
 
 
@@ -274,7 +274,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://sudlivre.github.io/2019/09/27/Windows-Automatic-Remote-Desktop/">
+    <link itemprop="mainEntityOfPage" href="https://sudlivre.github.io/2019/10/03/Golang进阶实战之IO操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sudlivre">
@@ -286,7 +286,7 @@
       <meta itemprop="name" content="南書兮">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Windows Automatic Remote Desktop
+        <h1 class="post-title" itemprop="name headline">Golang进阶实战之IO操作
 
           
         </h1>
@@ -302,19 +302,11 @@
                 
               
 
-              <time title="创建时间：2019-09-27 22:23:47" itemprop="dateCreated datePublished" datetime="2019-09-27T22:23:47+08:00">2019-09-27</time>
+              <time title="创建时间：2019-10-03 15:33:33 / 修改时间：16:02:54" itemprop="dateCreated datePublished" datetime="2019-10-03T15:33:33+08:00">2019-10-03</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-29 18:29:27" itemprop="dateModified" datetime="2019-09-29T18:29:27+08:00">2019-09-29</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -323,7 +315,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a></span>
 
                 
                 
@@ -342,19 +334,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Based on Windows Server 2012</p><h3 id="premise"><a href="#premise" class="headerlink" title="premise"></a>premise</h3><ul>
-<li>remote machine need open winrm service</li>
-<li>base host need PsExec.exe for start up display</li>
-</ul><h3 id="bat-script"><a href="#bat-script" class="headerlink" title="bat script"></a>bat script</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">REM Skip popup</span></span><br><span class="line">REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Terminal Server Client" /v AuthenticationLevelOverride /t REG_DWORD /d <span class="number">0</span> /f</span><br><span class="line"><span class="comment">REM Modify group policy</span></span><br><span class="line">REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation\AllowSavedCredentialsWhenNTLMOnly" /v 1 /t RED_SZ /d TERMSRV/* /f</span><br><span class="line"><span class="comment">REM Update group policy</span></span><br><span class="line">gpupdate /force</span><br><span class="line"><span class="comment">REM Add login credentials</span></span><br><span class="line">CMDKEY /add:remote_ip /user:user /pass:password</span><br><span class="line"><span class="comment">REM Remote desktop</span></span><br><span class="line">MSTSC /v:remote_ip:remote_port</span><br></pre></td></tr></table></figure><a id="more"></a>
-
-
-<h3 id="start-the-script-by-command"><a href="#start-the-script-by-command" class="headerlink" title="start the script by command"></a>start the script by command</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PsExec.exe \\ip -accepteula -u user -p password -i <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure>
-<p>or use <code>query user</code> find ID</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PsExec.exe \\ip -accepteula -u user -p password -i ID <span class="built_in">cmd</span></span><br></pre></td></tr></table></figure>
-<h3 id="About-wmic"><a href="#About-wmic" class="headerlink" title="About wmic"></a>About wmic</h3><p>open remote desktop service</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic /node:"[full machine name]" /USER:"[domain]\[username]" <span class="built_in">PATH</span> win32_terminalservicesetting WHERE (__Class!="") <span class="keyword">CALL</span> SetAllowTSConnections <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>use wmic open remote process</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic /node:ip /user:"administrator" /password:"password" process <span class="keyword">call</span> create commandline="command"</span><br></pre></td></tr></table></figure>
+        <h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// file文件操作</span></span><br><span class="line">    fileInfo, err := os.Stat(<span class="string">"aaa.txt"</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">"error"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(fileInfo)</span><br><span class="line">    fmt.Println(fileInfo.Name())</span><br><span class="line">    fmt.Println(fileInfo.Size())</span><br><span class="line">    fmt.Println(fileInfo.IsDir())</span><br><span class="line">    <span class="comment">// 文件权限</span></span><br><span class="line">    fmt.Println(fileInfo.Mode())</span><br><span class="line">    fmt.Println(fileInfo.ModTime())</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 路径</span></span><br><span class="line">    fileName1 := <span class="string">"aaa.txt"</span></span><br><span class="line">    fmt.Println(filepath.Abs(fileName1))</span><br><span class="line">    fmt.Println(filepath.IsAbs(fileName1))</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建目录</span></span><br><span class="line">    err = os.MkdirAll(<span class="string">"aa"</span>, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">"error"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 创建Create 打开Open OpenFile 关闭Close 删除Remove RemoveAll</span></span><br><span class="line">    file, err2 := os.Create(<span class="string">"fileName2.txt"</span>)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">"error"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(file)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+<h2 id="数据读写"><a href="#数据读写" class="headerlink" title="数据读写"></a>数据读写</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// io</span></span><br><span class="line">    <span class="comment">// 读取数据: Read</span></span><br><span class="line">    file, err := os.Open(<span class="string">"aaa.txt"</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">    bs := <span class="built_in">make</span>([]<span class="keyword">byte</span>, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">    <span class="comment">//n, err := file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line"></span><br><span class="line">    n := <span class="number">-1</span></span><br><span class="line">    <span class="keyword">for</span> &#123;</span><br><span class="line">        n, err = file.Read(bs)</span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span> || err == io.EOF &#123;</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">        fmt.Println(<span class="keyword">string</span>(bs[:n]))</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入数据: Write</span></span><br><span class="line">    file2, err2 := os.OpenFile(<span class="string">"bbb.txt"</span>, os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> file2.Close()</span><br><span class="line">    bs2 := []<span class="keyword">byte</span>&#123;<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>&#125;</span><br><span class="line">    n2, err4 := file2.Write(bs2)</span><br><span class="line">    <span class="keyword">if</span> err4 != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(n2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="io相关"><a href="#io相关" class="headerlink" title="io相关"></a>io相关</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// copy</span></span><br><span class="line">    <span class="comment">// 可以用Read和Write利用切片实现复制文件</span></span><br><span class="line">    <span class="comment">// io.Copy()</span></span><br><span class="line">    <span class="comment">// ioutil.ReadFile() ioutil.WriteFile()</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Seek接口设置读写文件偏移量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 断点续传 ；利用临时文件记录传输了多少数据</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// bufio 添加缓冲区 提高io效率</span></span><br><span class="line">    <span class="comment">// buifo.NewReader(file)</span></span><br><span class="line">    <span class="comment">// Flush() 刷新缓冲区</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -371,7 +353,7 @@
     <strong>本文作者： </strong>Sudlivre</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sudlivre.github.io/2019/09/27/Windows-Automatic-Remote-Desktop/" title="Windows Automatic Remote Desktop">https://sudlivre.github.io/2019/09/27/Windows-Automatic-Remote-Desktop/</a>
+    <a href="https://sudlivre.github.io/2019/10/03/Golang进阶实战之IO操作/" title="Golang进阶实战之IO操作">https://sudlivre.github.io/2019/10/03/Golang进阶实战之IO操作/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -386,9 +368,9 @@
           
           <div class="post-tags">
             
-              <a href="/tags/PsExec/" rel="tag"># PsExec</a>
+              <a href="/tags/Golang/" rel="tag"># Golang</a>
             
-              <a href="/tags/bat/" rel="tag"># bat</a>
+              <a href="/tags/Golang-Days/" rel="tag"># Golang Days</a>
             
           </div>
         
@@ -398,15 +380,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/09/30/Golang基础语法之六/" rel="next" title="Golang基础语法之六">
+                  <i class="fa fa-chevron-left"></i> Golang基础语法之六
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/28/Golang基础语法之一/" rel="prev" title="Golang基础语法之一">
-                  Golang基础语法之一 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -458,7 +440,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#premise"><span class="nav-number">1.</span> <span class="nav-text">premise</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bat-script"><span class="nav-number">2.</span> <span class="nav-text">bat script</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#start-the-script-by-command"><span class="nav-number">3.</span> <span class="nav-text">start the script by command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#About-wmic"><span class="nav-number">4.</span> <span class="nav-text">About wmic</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件读写"><span class="nav-number">1.</span> <span class="nav-text">文件读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据读写"><span class="nav-number">2.</span> <span class="nav-text">数据读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io相关"><span class="nav-number">3.</span> <span class="nav-text">io相关</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -679,7 +661,7 @@ window.addEventListener('pjax:success', () => {
       repo: 'sudlivre.github.io',
       owner: 'Sudlivre',
       admin: ['sudlivre'],
-      id: '51cb49d29d9e8aac8c43d2d5b7550e48',
+      id: '3a4e17db8d78a03c1a39bbb03224f679',
         language: 'zh-CN',
       
       distractionFreeMode: 'true'

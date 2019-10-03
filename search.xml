@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Golang进阶实战之IO操作]]></title>
+    <url>%2F2019%2F10%2F03%2FGolang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8BIO%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[文件读写12345678910111213141516171819202122232425262728293031323334func main() &#123; // file文件操作 fileInfo, err := os.Stat("aaa.txt") if err != nil &#123; fmt.Println("error") return &#125; fmt.Println(fileInfo) fmt.Println(fileInfo.Name()) fmt.Println(fileInfo.Size()) fmt.Println(fileInfo.IsDir()) // 文件权限 fmt.Println(fileInfo.Mode()) fmt.Println(fileInfo.ModTime()) // 路径 fileName1 := "aaa.txt" fmt.Println(filepath.Abs(fileName1)) fmt.Println(filepath.IsAbs(fileName1)) // 创建目录 err = os.MkdirAll("aa", os.ModePerm) if err != nil &#123; fmt.Println("error") return &#125; // 创建Create 打开Open OpenFile 关闭Close 删除Remove RemoveAll file, err2 := os.Create("fileName2.txt") if err2 != nil &#123; fmt.Println("error") return &#125; fmt.Println(file)&#125; 数据读写1234567891011121314151617181920212223242526272829303132333435363738394041424344454647func main() &#123; // io // 读取数据: Read file, err := os.Open("aaa.txt") if err != nil &#123; return &#125; defer file.Close() bs := make([]byte, 4, 4) //n, err := file.Read(bs) //println(err) //println(n) //println(string(bs)) // //n, err = file.Read(bs) //println(err) //println(n) //println(string(bs)) // //n, err = file.Read(bs) //println(err) //println(n) //println(string(bs)) n := -1 for &#123; n, err = file.Read(bs) if n == 0 || err == io.EOF &#123; break &#125; fmt.Println(string(bs[:n])) &#125; // 写入数据: Write file2, err2 := os.OpenFile("bbb.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm) if err2 != nil &#123; return &#125; defer file2.Close() bs2 := []byte&#123;44,55,66&#125; n2, err4 := file2.Write(bs2) if err4 != nil &#123; return &#125; fmt.Println(n2)&#125; io相关123456789101112131415func main() &#123; // copy // 可以用Read和Write利用切片实现复制文件 // io.Copy() // ioutil.ReadFile() ioutil.WriteFile() // Seek接口设置读写文件偏移量 // 断点续传 ；利用临时文件记录传输了多少数据 // bufio 添加缓冲区 提高io效率 // buifo.NewReader(file) // Flush() 刷新缓冲区&#125;]]></content>
+      <categories>
+        <category>Golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Golang Days</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Golang基础语法之六]]></title>
     <url>%2F2019%2F09%2F30%2FGolang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%85%AD%2F</url>
     <content type="text"><![CDATA[type关键字定义类型12345678910111213141516// 定义新的类型type myint inttype mystr string// 定义函数类型type myfun func(int, int)(string)func fun1()myfun&#123;&#125;// 类型别名type bieming = Type// 别名不能添加本地方法，除非使用type定义新的类型（不使用等号）// 别名嵌套注意混淆 错误处理创建错误1234if err != nil &#123; log.Fatal(err) return&#125; 使用errors包的New函数创建错误 使用fmt包下的Errorf函数创建错误 错误类型断言，然后获取错误信息 错误不要忽略 自定义错误实现error接口, 实现方式如文档五所示 panic和recoverpanic恐慌 恐慌后的代码不执行，已经defer的代码会执行 123456func funcA() &#123; fmt.Println("a")&#125;func funcB() &#123;&#125; recover 捕获panic 12345defer func() &#123; if msg := recover; msg!=nil &#123; fmt.Println("恢复主函数") &#125;&#125;() 适合panic场景： 空指针引用 下标越界 除数为0 不应该出现的分支，比如default 输入不应该引起函数错误]]></content>
