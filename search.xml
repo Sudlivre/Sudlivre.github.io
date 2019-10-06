@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Golang进阶实战之并发]]></title>
+    <url>%2F2019%2F10%2F03%2FGolang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8B%E5%B9%B6%E5%8F%91%2F</url>
+    <content type="text"><![CDATA[go1234567891011121314func main() &#123; // goroutine // 关键字go 主goroutine，子goroutine结束 go printNum() for i := 1; i &lt; 100; i++ &#123; fmt.Println("main:", i) &#125;&#125;func printNum() &#123; for i := 1; i &lt; 100; i++ &#123; fmt.Println("child: ", i) &#125;&#125; 并发模型GPM runtime包临界资源安全var wg sync.WaitGroup // 创建同步等待组对象 Add Wait Done 互斥锁var mutex sync.Mutex // 创建锁 Lock UnLock 读写锁 读操作可以同时进行 写操作不可以同时进行，啥也不能干，不能读也不能写 channel通道实现goroutine之间通信 非缓冲通道1234ch1 := make(chan int)ch1 &lt;- 2 // 写data := &lt;- ch1 // 读// 读写都是阻塞的，读写时对应的。不然会死锁 close(ch1) // 关闭通道 可以使用for ... range ch1访问通道 缓冲通道 发送：缓冲区数据满了，才会阻塞 接收：缓冲区数据空了，才会阻塞 ch2 := make(chan int, 5) 读取类似队列 单向通道123ch2 := make(chan &lt;- int) // 只能写ch2 := make(&lt;- chan int) // 只能读// 一般用在函数中限制只读，只写]]></content>
+      <categories>
+        <category>Golang</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>Golang Days</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Golang进阶实战之IO操作]]></title>
     <url>%2F2019%2F10%2F03%2FGolang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8BIO%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[文件读写12345678910111213141516171819202122232425262728293031323334func main() &#123; // file文件操作 fileInfo, err := os.Stat("aaa.txt") if err != nil &#123; fmt.Println("error") return &#125; fmt.Println(fileInfo) fmt.Println(fileInfo.Name()) fmt.Println(fileInfo.Size()) fmt.Println(fileInfo.IsDir()) // 文件权限 fmt.Println(fileInfo.Mode()) fmt.Println(fileInfo.ModTime()) // 路径 fileName1 := "aaa.txt" fmt.Println(filepath.Abs(fileName1)) fmt.Println(filepath.IsAbs(fileName1)) // 创建目录 err = os.MkdirAll("aa", os.ModePerm) if err != nil &#123; fmt.Println("error") return &#125; // 创建Create 打开Open OpenFile 关闭Close 删除Remove RemoveAll file, err2 := os.Create("fileName2.txt") if err2 != nil &#123; fmt.Println("error") return &#125; fmt.Println(file)&#125; 数据读写1234567891011121314151617181920212223242526272829303132333435363738394041424344454647func main() &#123; // io // 读取数据: Read file, err := os.Open("aaa.txt") if err != nil &#123; return &#125; defer file.Close() bs := make([]byte, 4, 4) //n, err := file.Read(bs) //println(err) //println(n) //println(string(bs)) // //n, err = file.Read(bs) //println(err) //println(n) //println(string(bs)) // //n, err = file.Read(bs) //println(err) //println(n) //println(string(bs)) n := -1 for &#123; n, err = file.Read(bs) if n == 0 || err == io.EOF &#123; break &#125; fmt.Println(string(bs[:n])) &#125; // 写入数据: Write file2, err2 := os.OpenFile("bbb.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm) if err2 != nil &#123; return &#125; defer file2.Close() bs2 := []byte&#123;44,55,66&#125; n2, err4 := file2.Write(bs2) if err4 != nil &#123; return &#125; fmt.Println(n2)&#125; io相关123456789101112131415func main() &#123; // copy // 可以用Read和Write利用切片实现复制文件 // io.Copy() // ioutil.ReadFile() ioutil.WriteFile() // Seek接口设置读写文件偏移量 // 断点续传 ；利用临时文件记录传输了多少数据 // bufio 添加缓冲区 提高io效率 // buifo.NewReader(file) // Flush() 刷新缓冲区&#125;]]></content>

@@ -57,18 +57,19 @@
   };
 </script>
 
-  <meta name="description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
-<meta name="keywords" content="Python, Go, nodejs, Typescript, Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="南書兮">
-<meta property="og:url" content="https://sudlivre.github.io/categories/Golang/index.html">
+  <meta name="description" content="go1234567891011121314func main() &amp;#123;    // goroutine    // 关键字go 主goroutine，子goroutine结束    go printNum()    for i := 1; i &amp;lt; 100; i++ &amp;#123;        fmt.Println(&quot;main:&quot;, i)    &amp;#125;&amp;#125;func pr">
+<meta name="keywords" content="Golang,Golang Days">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang进阶实战之并发">
+<meta property="og:url" content="https://sudlivre.github.io/2019/10/03/Golang进阶实战之并发/index.html">
 <meta property="og:site_name" content="南書兮">
-<meta property="og:description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
+<meta property="og:description" content="go1234567891011121314func main() &amp;#123;    // goroutine    // 关键字go 主goroutine，子goroutine结束    go printNum()    for i := 1; i &amp;lt; 100; i++ &amp;#123;        fmt.Println(&quot;main:&quot;, i)    &amp;#125;&amp;#125;func pr">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-06T10:03:48.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="南書兮">
-<meta name="twitter:description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
-  <link rel="canonical" href="https://sudlivre.github.io/categories/Golang/">
+<meta name="twitter:title" content="Golang进阶实战之并发">
+<meta name="twitter:description" content="go1234567891011121314func main() &amp;#123;    // goroutine    // 关键字go 主goroutine，子goroutine结束    go printNum()    for i := 1; i &amp;lt; 100; i++ &amp;#123;        fmt.Println(&quot;main:&quot;, i)    &amp;#125;&amp;#125;func pr">
+  <link rel="canonical" href="https://sudlivre.github.io/2019/10/03/Golang进阶实战之并发/">
 
 
 <script id="page-configurations">
@@ -76,13 +77,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>分类: Golang | 南書兮</title>
+  <title>Golang进阶实战之并发 | 南書兮</title>
   
 
 
@@ -264,291 +265,183 @@
         <div class="content-wrap">
             
 
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-  
-
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block category">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">Golang<small>分类</small>
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://sudlivre.github.io/2019/10/03/Golang进阶实战之并发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sudlivre">
+      <meta itemprop="description" content="涉猎主要编程语言Python, Go，领域涵盖爬虫，Web前后端开发，数据分析，机器学习，服务研发等。">
+      <meta itemprop="image" content="/images/book-big-icon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南書兮">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Golang进阶实战之并发
+
+          
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-03 16:03:27" itemprop="dateCreated datePublished" datetime="2019-10-03T16:03:27+08:00">2019-10-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-06 18:03:48" itemprop="dateModified" datetime="2019-10-06T18:03:48+08:00">2019-10-06</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="go"><a href="#go" class="headerlink" title="go"></a>go</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// goroutine</span></span><br><span class="line">    <span class="comment">// 关键字go 主goroutine，子goroutine结束</span></span><br><span class="line">    <span class="keyword">go</span> printNum()</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">        fmt.Println(<span class="string">"main:"</span>, i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printNum</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">        fmt.Println(<span class="string">"child: "</span>, i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+<h2 id="并发模型"><a href="#并发模型" class="headerlink" title="并发模型"></a>并发模型</h2><p>GPM</p>
+<h2 id="runtime包"><a href="#runtime包" class="headerlink" title="runtime包"></a>runtime包</h2><h2 id="临界资源安全"><a href="#临界资源安全" class="headerlink" title="临界资源安全"></a>临界资源安全</h2><p><code>var wg sync.WaitGroup</code> // 创建同步等待组对象</p>
+<ul>
+<li>Add</li>
+<li>Wait</li>
+<li>Done</li>
+</ul>
+<h2 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h2><p><code>var mutex sync.Mutex</code> // 创建锁</p>
+<ul>
+<li>Lock</li>
+<li>UnLock</li>
+</ul>
+<h2 id="读写锁"><a href="#读写锁" class="headerlink" title="读写锁"></a>读写锁</h2><ul>
+<li>读操作可以同时进行</li>
+<li>写操作不可以同时进行，啥也不能干，不能读也不能写</li>
+</ul>
+<h2 id="channel通道"><a href="#channel通道" class="headerlink" title="channel通道"></a>channel通道</h2><p>实现goroutine之间通信</p>
+<h3 id="非缓冲通道"><a href="#非缓冲通道" class="headerlink" title="非缓冲通道"></a>非缓冲通道</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ch1 := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">ch1 &lt;- <span class="number">2</span> <span class="comment">// 写</span></span><br><span class="line">data := &lt;- ch1 <span class="comment">// 读</span></span><br><span class="line"><span class="comment">// 读写都是阻塞的，读写时对应的。不然会死锁</span></span><br></pre></td></tr></table></figure>
+<p><code>close(ch1)</code> // 关闭通道</p>
+<p>可以使用<code>for ... range ch1</code>访问通道</p>
+<h3 id="缓冲通道"><a href="#缓冲通道" class="headerlink" title="缓冲通道"></a>缓冲通道</h3><ul>
+<li>发送：缓冲区数据满了，才会阻塞</li>
+<li>接收：缓冲区数据空了，才会阻塞</li>
+</ul>
+<p><code>ch2 := make(chan int, 5)</code></p>
+<p>读取类似队列</p>
+<h3 id="单向通道"><a href="#单向通道" class="headerlink" title="单向通道"></a>单向通道</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ch2 := <span class="built_in">make</span>(<span class="keyword">chan</span> &lt;- <span class="keyword">int</span>) <span class="comment">// 只能写</span></span><br><span class="line">ch2 := <span class="built_in">make</span>(&lt;- <span class="keyword">chan</span> <span class="keyword">int</span>) <span class="comment">// 只能读</span></span><br><span class="line"><span class="comment">// 一般用在函数中限制只读，只写</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+        
+      
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Sudlivre</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sudlivre.github.io/2019/10/03/Golang进阶实战之并发/" title="Golang进阶实战之并发">https://sudlivre.github.io/2019/10/03/Golang进阶实战之并发/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+</div>
 
       
 
-  
-  
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Golang/" rel="tag"># Golang</a>
+            
+              <a href="/tags/Golang-Days/" rel="tag"># Golang Days</a>
+            
+          </div>
+        
 
-  
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/03/Golang进阶实战之IO操作/" rel="next" title="Golang进阶实战之IO操作">
+                  <i class="fa fa-chevron-left"></i> Golang进阶实战之IO操作
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/03/Golang进阶实战之并发/" itemprop="url">
-            <span itemprop="name">Golang进阶实战之并发</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-03T16:03:27+08:00"
-              content="2019-10-03">
-          10-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/10/03/Golang进阶实战之IO操作/" itemprop="url">
-            <span itemprop="name">Golang进阶实战之IO操作</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-10-03T15:33:33+08:00"
-              content="2019-10-03">
-          10-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/30/Golang基础语法之六/" itemprop="url">
-            <span itemprop="name">Golang基础语法之六</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-30T10:58:32+08:00"
-              content="2019-09-30">
-          09-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/29/Golang基础语法之五/" itemprop="url">
-            <span itemprop="name">Golang基础语法之五</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-29T17:03:35+08:00"
-              content="2019-09-29">
-          09-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/29/Golang基础语法之四/" itemprop="url">
-            <span itemprop="name">Golang基础语法之四</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-29T14:16:52+08:00"
-              content="2019-09-29">
-          09-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/29/Golang基础语法之三/" itemprop="url">
-            <span itemprop="name">Golang基础语法之三</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-29T09:28:06+08:00"
-              content="2019-09-29">
-          09-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/28/Golang基础语法之二/" itemprop="url">
-            <span itemprop="name">Golang基础语法之二</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-28T16:41:18+08:00"
-              content="2019-09-28">
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/09/28/Golang基础语法之一/" itemprop="url">
-            <span itemprop="name">Golang基础语法之一</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-09-28T08:26:25+08:00"
-              content="2019-09-28">
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    </div>
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
         </div>
           
@@ -563,6 +456,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -575,6 +473,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#go"><span class="nav-number">1.</span> <span class="nav-text">go</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并发模型"><span class="nav-number">2.</span> <span class="nav-text">并发模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#runtime包"><span class="nav-number">3.</span> <span class="nav-text">runtime包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#临界资源安全"><span class="nav-number">4.</span> <span class="nav-text">临界资源安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互斥锁"><span class="nav-number">5.</span> <span class="nav-text">互斥锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读写锁"><span class="nav-number">6.</span> <span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#channel通道"><span class="nav-number">7.</span> <span class="nav-text">channel通道</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非缓冲通道"><span class="nav-number">7.1.</span> <span class="nav-text">非缓冲通道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓冲通道"><span class="nav-number">7.2.</span> <span class="nav-text">缓冲通道</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单向通道"><span class="nav-number">7.3.</span> <span class="nav-text">单向通道</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
@@ -784,6 +684,24 @@ window.addEventListener('pjax:success', () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'ac9ec76afc947e6c4dd5',
+      clientSecret: 'd32a56c27bbc5456c3f1f77e033af8ec5d95b937',
+      repo: 'sudlivre.github.io',
+      owner: 'Sudlivre',
+      admin: ['sudlivre'],
+      id: '1ef71c4374cb49bc61f8707799b8a3e5',
+        language: 'zh-CN',
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
     </div>
 </body>
