@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sudlivre.github.io/"/>
-  <updated>2019-10-06T10:03:48.202Z</updated>
+  <updated>2019-10-08T12:48:04.595Z</updated>
   <id>https://sudlivre.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-CentOS7 Install MySQL5.7</title>
+    <link href="https://sudlivre.github.io/2019/10/08/Linux-CentOS7-Install-MySQL5-7/"/>
+    <id>https://sudlivre.github.io/2019/10/08/Linux-CentOS7-Install-MySQL5-7/</id>
+    <published>2019-10-08T12:27:17.000Z</published>
+    <updated>2019-10-08T12:48:04.595Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget 'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'</span><br><span class="line"></span><br><span class="line">rpm -Uvh mysql57-community-release-el7-11.noarch.rpm</span><br><span class="line"></span><br><span class="line">yum repolist all | grep mysql</span><br><span class="line"></span><br><span class="line">yum install -y mysql-community-server</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h3 id="Start-mysqld"><a href="#Start-mysqld" class="headerlink" title="Start mysqld"></a>Start mysqld</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure><h3 id="View-temporary-password"><a href="#View-temporary-password" class="headerlink" title="View temporary password"></a>View temporary password</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep password /var/log/mysqld.log</span><br></pre></td></tr></table></figure><h3 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"><span class="meta">#</span> enter password</span><br><span class="line"></span><br><span class="line">set password=password("Mysql_123");</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure><h3 id="Open-remote-access"><a href="#Open-remote-access" class="headerlink" title="Open remote access"></a>Open remote access</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"><span class="meta">#</span> enter password</span><br><span class="line">use mysql;</span><br><span class="line"></span><br><span class="line">update user set host = '%' where user = 'root';</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure><h3 id="Restart-mysqld"><a href="#Restart-mysqld" class="headerlink" title="Restart mysqld"></a>Restart mysqld</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure><h3 id="Open-self-starting"><a href="#Open-self-starting" class="headerlink" title="Open self-starting"></a>Open self-starting</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable mysqld</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Install&quot;&gt;&lt;a href=&quot;#Install&quot; class=&quot;headerlink&quot; title=&quot;Install&quot;&gt;&lt;/a&gt;Install&lt;/h2&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget &#39;https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rpm -Uvh mysql57-community-release-el7-11.noarch.rpm&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yum repolist all | grep mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;yum install -y mysql-community-server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://sudlivre.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://sudlivre.github.io/tags/Linux/"/>
+    
+      <category term="Database" scheme="https://sudlivre.github.io/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>Golang进阶实战之并发</title>

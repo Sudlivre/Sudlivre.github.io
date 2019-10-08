@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux-CentOS7 Install MySQL5.7]]></title>
+    <url>%2F2019%2F10%2F08%2FLinux-CentOS7-Install-MySQL5-7%2F</url>
+    <content type="text"><![CDATA[Install1234567wget 'https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm'rpm -Uvh mysql57-community-release-el7-11.noarch.rpmyum repolist all | grep mysqlyum install -y mysql-community-server ConfigurationStart mysqld1systemctl start mysqld View temporary password1grep password /var/log/mysqld.log Login123456mysql -u root -p# enter passwordset password=password("Mysql_123");exit Open remote access1234567mysql -u root -p# enter passworduse mysql;update user set host = '%' where user = 'root';exit Restart mysqld1systemctl restart mysqld Open self-starting12systemctl enable mysqldsystemctl daemon-reload]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Database</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Golang进阶实战之并发]]></title>
     <url>%2F2019%2F10%2F03%2FGolang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8B%E5%B9%B6%E5%8F%91%2F</url>
     <content type="text"><![CDATA[go1234567891011121314func main() &#123; // goroutine // 关键字go 主goroutine，子goroutine结束 go printNum() for i := 1; i &lt; 100; i++ &#123; fmt.Println("main:", i) &#125;&#125;func printNum() &#123; for i := 1; i &lt; 100; i++ &#123; fmt.Println("child: ", i) &#125;&#125; 并发模型GPM runtime包临界资源安全var wg sync.WaitGroup // 创建同步等待组对象 Add Wait Done 互斥锁var mutex sync.Mutex // 创建锁 Lock UnLock 读写锁 读操作可以同时进行 写操作不可以同时进行，啥也不能干，不能读也不能写 channel通道实现goroutine之间通信 非缓冲通道1234ch1 := make(chan int)ch1 &lt;- 2 // 写data := &lt;- ch1 // 读// 读写都是阻塞的，读写时对应的。不然会死锁 close(ch1) // 关闭通道 可以使用for ... range ch1访问通道 缓冲通道 发送：缓冲区数据满了，才会阻塞 接收：缓冲区数据空了，才会阻塞 ch2 := make(chan int, 5) 读取类似队列 单向通道123ch2 := make(chan &lt;- int) // 只能写ch2 := make(&lt;- chan int) // 只能读// 一般用在函数中限制只读，只写]]></content>
