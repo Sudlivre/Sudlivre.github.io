@@ -119,9 +119,19 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -158,7 +168,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2021/06/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/10/08/Linux-CentOS7-Install-MySQL5-7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -171,7 +181,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/29/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/2019/10/08/Linux-CentOS7-Install-MySQL5-7/" class="post-title-link" itemprop="url">Linux-CentOS7 Install MySQL5.7</a>
         </h2>
 
         <div class="post-meta-container">
@@ -182,7 +192,23 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-06-29 23:46:59" itemprop="dateCreated datePublished" datetime="2021-06-29T23:46:59+08:00">2021-06-29</time>
+      <time title="创建时间：2019-10-08 20:27:17" itemprop="dateCreated datePublished" datetime="2019-10-08T20:27:17+08:00">2019-10-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
     </span>
 
   
@@ -195,19 +221,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget &#x27;https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm&#x27;</span><br><span class="line"></span><br><span class="line">rpm -Uvh mysql57-community-release-el7-11.noarch.rpm</span><br><span class="line"></span><br><span class="line">yum repolist all | grep mysql</span><br><span class="line"></span><br><span class="line">yum install -y mysql-community-server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h3 id="Start-mysqld"><a href="#Start-mysqld" class="headerlink" title="Start mysqld"></a>Start mysqld</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="View-temporary-password"><a href="#View-temporary-password" class="headerlink" title="View temporary password"></a>View temporary password</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep password /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Login"><a href="#Login" class="headerlink" title="Login"></a>Login</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"><span class="meta">#</span><span class="bash"> enter password</span></span><br><span class="line"></span><br><span class="line">set password=password(&quot;Mysql_123&quot;);</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="Open-remote-access"><a href="#Open-remote-access" class="headerlink" title="Open remote access"></a>Open remote access</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"><span class="meta">#</span><span class="bash"> enter password</span></span><br><span class="line">use mysql;</span><br><span class="line"></span><br><span class="line">update user set host = &#x27;%&#x27; where user = &#x27;root&#x27;;</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<h3 id="Restart-mysqld"><a href="#Restart-mysqld" class="headerlink" title="Restart mysqld"></a>Restart mysqld</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+
+<h3 id="Open-self-starting"><a href="#Open-self-starting" class="headerlink" title="Open self-starting"></a>Open self-starting</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable mysqld</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -226,6 +252,929 @@
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/10/03/Golang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8B%E5%B9%B6%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/10/03/Golang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8B%E5%B9%B6%E5%8F%91/" class="post-title-link" itemprop="url">Golang进阶实战之并发</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-10-03 16:03:27" itemprop="dateCreated datePublished" datetime="2019-10-03T16:03:27+08:00">2019-10-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="go"><a href="#go" class="headerlink" title="go"></a>go</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// goroutine</span></span><br><span class="line">    <span class="comment">// 关键字go 主goroutine，子goroutine结束</span></span><br><span class="line">    <span class="keyword">go</span> printNum()</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;main:&quot;</span>, i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printNum</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">1</span>; i &lt; <span class="number">100</span>; i++ &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;child: &quot;</span>, i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="并发模型"><a href="#并发模型" class="headerlink" title="并发模型"></a>并发模型</h2><p>GPM</p>
+<h2 id="runtime包"><a href="#runtime包" class="headerlink" title="runtime包"></a>runtime包</h2><h2 id="临界资源安全"><a href="#临界资源安全" class="headerlink" title="临界资源安全"></a>临界资源安全</h2><p><code>var wg sync.WaitGroup</code> // 创建同步等待组对象</p>
+<ul>
+<li>Add</li>
+<li>Wait</li>
+<li>Done</li>
+</ul>
+<h2 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h2><p><code>var mutex sync.Mutex</code> // 创建锁</p>
+<ul>
+<li>Lock</li>
+<li>UnLock</li>
+</ul>
+<h2 id="读写锁"><a href="#读写锁" class="headerlink" title="读写锁"></a>读写锁</h2><ul>
+<li>读操作可以同时进行</li>
+<li>写操作不可以同时进行，啥也不能干，不能读也不能写</li>
+</ul>
+<h2 id="channel通道"><a href="#channel通道" class="headerlink" title="channel通道"></a>channel通道</h2><p>实现goroutine之间通信</p>
+<h3 id="非缓冲通道"><a href="#非缓冲通道" class="headerlink" title="非缓冲通道"></a>非缓冲通道</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ch1 := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">int</span>)</span><br><span class="line">ch1 &lt;- <span class="number">2</span> <span class="comment">// 写</span></span><br><span class="line">data := &lt;- ch1 <span class="comment">// 读</span></span><br><span class="line"><span class="comment">// 读写都是阻塞的，读写时对应的。不然会死锁</span></span><br></pre></td></tr></table></figure>
+
+<p><code>close(ch1)</code> // 关闭通道</p>
+<p>可以使用<code>for ... range ch1</code>访问通道</p>
+<h3 id="缓冲通道"><a href="#缓冲通道" class="headerlink" title="缓冲通道"></a>缓冲通道</h3><ul>
+<li>发送：缓冲区数据满了，才会阻塞</li>
+<li>接收：缓冲区数据空了，才会阻塞</li>
+</ul>
+<p><code>ch2 := make(chan int, 5)</code></p>
+<p>读取类似队列</p>
+<h3 id="单向通道"><a href="#单向通道" class="headerlink" title="单向通道"></a>单向通道</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ch2 := <span class="built_in">make</span>(<span class="keyword">chan</span> &lt;- <span class="keyword">int</span>) <span class="comment">// 只能写</span></span><br><span class="line">ch2 := <span class="built_in">make</span>(&lt;- <span class="keyword">chan</span> <span class="keyword">int</span>) <span class="comment">// 只能读</span></span><br><span class="line"><span class="comment">// 一般用在函数中限制只读，只写</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/10/03/Golang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8BIO%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/10/03/Golang%E8%BF%9B%E9%98%B6%E5%AE%9E%E6%88%98%E4%B9%8BIO%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Golang进阶实战之IO操作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-10-03 15:33:33" itemprop="dateCreated datePublished" datetime="2019-10-03T15:33:33+08:00">2019-10-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// file文件操作</span></span><br><span class="line">    fileInfo, err := os.Stat(<span class="string">&quot;aaa.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(fileInfo)</span><br><span class="line">    fmt.Println(fileInfo.Name())</span><br><span class="line">    fmt.Println(fileInfo.Size())</span><br><span class="line">    fmt.Println(fileInfo.IsDir())</span><br><span class="line">    <span class="comment">// 文件权限</span></span><br><span class="line">    fmt.Println(fileInfo.Mode())</span><br><span class="line">    fmt.Println(fileInfo.ModTime())</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 路径</span></span><br><span class="line">    fileName1 := <span class="string">&quot;aaa.txt&quot;</span></span><br><span class="line">    fmt.Println(filepath.Abs(fileName1))</span><br><span class="line">    fmt.Println(filepath.IsAbs(fileName1))</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建目录</span></span><br><span class="line">    err = os.MkdirAll(<span class="string">&quot;aa&quot;</span>, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 创建Create 打开Open OpenFile 关闭Close 删除Remove RemoveAll</span></span><br><span class="line">    file, err2 := os.Create(<span class="string">&quot;fileName2.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(file)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据读写"><a href="#数据读写" class="headerlink" title="数据读写"></a>数据读写</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// io</span></span><br><span class="line">    <span class="comment">// 读取数据: Read</span></span><br><span class="line">    file, err := os.Open(<span class="string">&quot;aaa.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">    bs := <span class="built_in">make</span>([]<span class="keyword">byte</span>, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">    <span class="comment">//n, err := file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line"></span><br><span class="line">    n := <span class="number">-1</span></span><br><span class="line">    <span class="keyword">for</span> &#123;</span><br><span class="line">        n, err = file.Read(bs)</span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span> || err == io.EOF &#123;</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">        fmt.Println(<span class="keyword">string</span>(bs[:n]))</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入数据: Write</span></span><br><span class="line">    file2, err2 := os.OpenFile(<span class="string">&quot;bbb.txt&quot;</span>, os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> file2.Close()</span><br><span class="line">    bs2 := []<span class="keyword">byte</span>&#123;<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>&#125;</span><br><span class="line">    n2, err4 := file2.Write(bs2)</span><br><span class="line">    <span class="keyword">if</span> err4 != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(n2)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="io相关"><a href="#io相关" class="headerlink" title="io相关"></a>io相关</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// copy</span></span><br><span class="line">    <span class="comment">// 可以用Read和Write利用切片实现复制文件</span></span><br><span class="line">    <span class="comment">// io.Copy()</span></span><br><span class="line">    <span class="comment">// ioutil.ReadFile() ioutil.WriteFile()</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Seek接口设置读写文件偏移量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 断点续传 ；利用临时文件记录传输了多少数据</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// bufio 添加缓冲区 提高io效率</span></span><br><span class="line">    <span class="comment">// buifo.NewReader(file)</span></span><br><span class="line">    <span class="comment">// Flush() 刷新缓冲区</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/30/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%85%AD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/30/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%85%AD/" class="post-title-link" itemprop="url">Golang基础语法之六</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-30 10:58:32" itemprop="dateCreated datePublished" datetime="2019-09-30T10:58:32+08:00">2019-09-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="type关键字"><a href="#type关键字" class="headerlink" title="type关键字"></a>type关键字</h2><p>定义类型</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义新的类型</span></span><br><span class="line"><span class="keyword">type</span> myint <span class="keyword">int</span></span><br><span class="line"><span class="keyword">type</span> mystr <span class="keyword">string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数类型</span></span><br><span class="line"><span class="keyword">type</span> myfun <span class="function"><span class="keyword">func</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span><span class="params">(<span class="keyword">string</span>)</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fun1</span><span class="params">()</span><span class="title">myfun</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类型别名</span></span><br><span class="line"><span class="keyword">type</span> bieming = Type</span><br><span class="line"></span><br><span class="line"><span class="comment">// 别名不能添加本地方法，除非使用type定义新的类型（不使用等号）</span></span><br><span class="line"><span class="comment">// 别名嵌套注意混淆</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><h3 id="创建错误"><a href="#创建错误" class="headerlink" title="创建错误"></a>创建错误</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    log.Fatal(err)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用errors包的New函数创建错误</li>
+<li>使用fmt包下的Errorf函数创建错误</li>
+</ul>
+<h3 id="错误类型"><a href="#错误类型" class="headerlink" title="错误类型"></a>错误类型</h3><p>断言，然后获取错误信息</p>
+<p>错误不要忽略</p>
+<h3 id="自定义错误"><a href="#自定义错误" class="headerlink" title="自定义错误"></a>自定义错误</h3><p>实现<code>error</code>接口, 实现方式如文档五所示</p>
+<h3 id="panic和recover"><a href="#panic和recover" class="headerlink" title="panic和recover"></a>panic和recover</h3><p>panic恐慌</p>
+<p>恐慌后的代码不执行，已经defer的代码会执行</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">funcA</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;a&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">funcB</span><span class="params">()</span></span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>recover</p>
+<p>捕获panic</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> msg := <span class="built_in">recover</span>; msg!=<span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;恢复主函数&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
+
+<p>适合panic场景：</p>
+<ul>
+<li>空指针引用</li>
+<li>下标越界</li>
+<li>除数为0</li>
+<li>不应该出现的分支，比如default</li>
+<li>输入不应该引起函数错误</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/29/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BA%94/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/29/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%BA%94/" class="post-title-link" itemprop="url">Golang基础语法之五</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-29 17:03:35" itemprop="dateCreated datePublished" datetime="2019-09-29T17:03:35+08:00">2019-09-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="定义指针"><a href="#定义指针" class="headerlink" title="定义指针"></a>定义指针</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a := <span class="number">10</span> <span class="comment">// 实际变量</span></span><br><span class="line"><span class="keyword">var</span> b *<span class="keyword">int</span> <span class="comment">// 声名指针变量</span></span><br><span class="line">b = &amp;a <span class="comment">// 指针变量指向a的内存地址</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 指针的指针</span></span><br><span class="line"><span class="keyword">var</span> c **<span class="keyword">int</span></span><br><span class="line">c = &amp;b</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组指针"><a href="#数组指针" class="headerlink" title="数组指针"></a>数组指针</h3><p>数组指针：存储数组的地址<br><code>*[4]int</code></p>
+<p>指针数组：存储的数据类型是指针<br><code>[4]*int</code></p>
+<h3 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h3><p>函数指针：函数默认是一个指针，没有*</p>
+<p>指针函数：函数的返回值是一个指针</p>
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><h3 id="定义结构体"><a href="#定义结构体" class="headerlink" title="定义结构体"></a>定义结构体</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    age <span class="keyword">int</span></span><br><span class="line">    sex <span class="keyword">string</span></span><br><span class="line">    address <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = Person</span><br><span class="line">p1.name = <span class="string">&quot;xiaosi&quot;</span></span><br><span class="line">p1.age = <span class="number">24</span></span><br><span class="line">p1.sex = <span class="string">&quot;girl&quot;</span></span><br><span class="line">p1.address = <span class="string">&quot;cq&quot;</span></span><br><span class="line"></span><br><span class="line">p2 := Person&#123;&#125;</span><br><span class="line"></span><br><span class="line">p3 := Person&#123;name: <span class="string">&quot;jjj&quot;</span>, ...&#125;</span><br><span class="line"></span><br><span class="line">p4 := Person&#123;<span class="string">&quot;jj&quot;</span>, <span class="number">24</span>, <span class="string">&quot;girl&quot;</span>, <span class="string">&quot;cq&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h3><p>结构体是值类型数据结构， 深拷贝</p>
+<p>可以定义结构体指针进行浅拷贝<code>var pp1 *Person</code></p>
+<h3 id="new操作"><a href="#new操作" class="headerlink" title="new操作"></a>new操作</h3><p>创建某种类型的指针的函数，<code>p1 := new(Person)</code> 返回指针</p>
+<h3 id="匿名结构体"><a href="#匿名结构体" class="headerlink" title="匿名结构体"></a>匿名结构体</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s3 := <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    age <span class="keyword">int</span></span><br><span class="line">&#125;&#123;</span><br><span class="line">    name <span class="string">&quot;xs&quot;</span></span><br><span class="line">    age <span class="number">24</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="匿名字段"><a href="#匿名字段" class="headerlink" title="匿名字段"></a>匿名字段</h3><p>不写字段名，默认类型作为字段，类型不能重复</p>
+<h3 id="结构体嵌套"><a href="#结构体嵌套" class="headerlink" title="结构体嵌套"></a>结构体嵌套</h3><p>一个结构体中的字段，是另一个结构体类型</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>面向对象：OOP</p>
+<p>Golang的结构体嵌套：</p>
+<ul>
+<li>模拟继承性：is - a 匿名字段：Person</li>
+<li>模拟聚合关系 has - a 例如字段：p Person</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    age <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Student <span class="keyword">struct</span> &#123;</span><br><span class="line">    Person <span class="comment">// 结构体作为匿名字段 Person字段可作为提升字段，可以直接获取属性和方法</span></span><br><span class="line">    school <span class="keyword">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>一个方法就是一个包含了接受者的函数，接受者可以是命名类型或者结构体类型的一个值或者是一个指针。<br>所有给定类型的方法属于该类型的方法集。</p>
+<p>语法同函数类似，区别需要有接受者。</p>
+<h3 id="方法定义"><a href="#方法定义" class="headerlink" title="方法定义"></a>方法定义</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Work <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">    age <span class="keyword">int</span></span><br><span class="line">    sex <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义方法</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(w Worker)</span> <span class="title">work</span> <span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(w.name, <span class="string">&quot;is working&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p *Worker)</span> <span class="title">rest</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(p.name, <span class="string">&quot;is sleeping&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">w1 := Worker&#123;<span class="string">&quot;xs&quot;</span>, <span class="number">24</span>, <span class="string">&quot;girl&quot;</span>&#125;</span><br><span class="line">w1.work()</span><br></pre></td></tr></table></figure>
+
+<p>继承性和方法重写</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>接口是一组方法的签名<br>接口和类型的实现关系，是非侵入式</p>
+<ul>
+<li>当需要接口类型的对象时，可以使用任意实现类对象代替</li>
+<li>接口对象不能访问实现类中的属性</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// define interface</span></span><br><span class="line"><span class="keyword">type</span> USB <span class="keyword">interface</span> &#123;</span><br><span class="line">    start()</span><br><span class="line">    end()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// define struct</span></span><br><span class="line"><span class="keyword">type</span> Mouse <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> FlashDisk <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// define method</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(m Mouse)</span><span class="title">start</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;sss&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(m Mouse)</span><span class="title">end</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ftm.Println(<span class="string">&quot;qqq&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(f FlashDisk)</span><span class="title">start</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;sss&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(f FlashDisk)</span><span class="title">end</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ftm.Println(<span class="string">&quot;qqq&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">testInterface</span><span class="params">(usb USB)</span></span> &#123;</span><br><span class="line">    usb.start()</span><br><span class="line">    usb.end()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>多态：一个事物的多种形态，Golang通过接口模拟多态</p>
+<p>就一个接口而言</p>
+<ul>
+<li>看成实现本身的类型，能够访问是想类中的属性和方法</li>
+<li>看成是对应接口的类型，那就只能访问接口中方法</li>
+</ul>
+<p>接口的用法：</p>
+<ul>
+<li>一个函数如果接受接口类型作为参数，那么实际上可以传入该接口的任意实现类型对象作为参数</li>
+<li>定义一个类型为接口类型，实际上可以赋值为任意实现类的对象</li>
+</ul>
+<p>鸭子类型：</p>
+<h3 id="空接口"><a href="#空接口" class="headerlink" title="空接口"></a>空接口</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> A <span class="keyword">interface</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// fmt包下面的Print系列函数就是空接口实现的</span></span><br></pre></td></tr></table></figure>
+
+<p>结合slice和map存储不同类型的数据</p>
+<h3 id="接口嵌套"><a href="#接口嵌套" class="headerlink" title="接口嵌套"></a>接口嵌套</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> A <span class="keyword">interface</span> &#123;</span><br><span class="line">    test1()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> B <span class="keyword">interface</span> &#123;</span><br><span class="line">    test2()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> C <span class="keyword">interface</span> &#123; <span class="comment">// 如果要实现接口C，那么接口A和接口B的方法都要实现</span></span><br><span class="line">    A</span><br><span class="line">    B</span><br><span class="line">    test3()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="接口断言"><a href="#接口断言" class="headerlink" title="接口断言"></a>接口断言</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Shape <span class="keyword">interface</span> &#123;</span><br><span class="line">    peri() <span class="keyword">float64</span></span><br><span class="line">    area <span class="keyword">float64</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> Triangle <span class="keyword">struct</span> &#123;</span><br><span class="line">    a,b,c <span class="keyword">float64</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(t Triangle)</span> <span class="title">peri</span><span class="params">()</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> t.a + t.b + t.c</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(t Triangle)</span> <span class="title">area</span> <span class="params">()</span><span class="title">float64</span></span> &#123;</span><br><span class="line">    p = t.peri() / <span class="number">2</span></span><br><span class="line">    s := math.Sqrt(p*(p-t.a)*(p-t.b)*(p-t.c))</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getType</span><span class="params">(s Shape)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 断言  判断s的实际类型</span></span><br><span class="line">    <span class="keyword">if</span> ins, ok := s.(Triangle); ok &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;is triangle&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getType2</span> <span class="params">(s Shape)</span></span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> ins := s.(<span class="keyword">type</span>) &#123;</span><br><span class="line">        <span class="keyword">case</span> Triangle:</span><br><span class="line">        fmt.Println(<span class="string">&quot;is Triangle&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/29/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%9B%9B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/29/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E5%9B%9B/" class="post-title-link" itemprop="url">Golang基础语法之四</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-29 14:16:52" itemprop="dateCreated datePublished" datetime="2019-09-29T14:16:52+08:00">2019-09-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">FuncName</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">FuncName()</span><br></pre></td></tr></table></figure>
+
+<p>函数调用的实参和形参必须一一对应，顺序，个数，类型</p>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">myFunc</span><span class="params">(arg ...<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> _, n := <span class="keyword">range</span> arg &#123;</span><br><span class="line">        fmt.Println(n)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myFunc(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">s1 := []<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">34</span>,<span class="number">5</span>&#125;</span><br><span class="line">myFunc(s1...)</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><ul>
+<li>值传递 传递的是参数的副本</li>
+<li>引用传递 传递的是参数的地址</li>
+</ul>
+<h3 id="函数中变量的作用域"><a href="#函数中变量的作用域" class="headerlink" title="函数中变量的作用域"></a>函数中变量的作用域</h3><p>作用域在函数中</p>
+<h2 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h2><p>延迟函数或者方法的执行，等待外围函数执行完在执行defer中的内容。</p>
+<p>如果存在多个defer，执行defer依据类似栈结构，先进后出。</p>
+<p>defer函数调用时，函数的参数已经传递。</p>
+<p>当外围函数中的语句正常执行完毕时，只有其中所有的延迟函数都执行完毕，外围函数才会真正的结束执行。</p>
+<p>当执行外围函数中的return语句时，只有其中所有的延迟函数都执行完毕后，外围函数才会真正返回。当外围函数中的代码引发运行恐慌时，只有其中所有延迟函数都执行完毕后，该运行时恐慌才会被扩展至调用函数。</p>
+<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>Golang支持函数式编程</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line">func3 = <span class="function"><span class="keyword">func</span> <span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>函数作为另一个函数的参数，发生调用。</p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>一个外层函数中，有内层函数，该内层函数中，会操作外层函数的局部变量，并且该外层函数的返回值就是这个内层函数。</p>
+<p>这个内层函数和外层函数的局部变量，统称为闭包结构。</p>
+<p>局部变量的生命周期会发生改变，正常的局部变量随着函数的调用而创建，随着函数的结束而销毁。但闭包结构不会随着函数的结束而销毁，因为内层函数还要继续使用。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/29/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%B8%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/29/Golang%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B9%8B%E4%B8%89/" class="post-title-link" itemprop="url">Golang基础语法之三</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-29 09:28:06" itemprop="dateCreated datePublished" datetime="2019-09-29T09:28:06+08:00">2019-09-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h2><p>伪随机数</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;math/rand&quot;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;time&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    num1 = rand.Int()</span><br><span class="line">    num2 = rand.Intn(<span class="number">10</span>)</span><br><span class="line">    rand.Seed(<span class="number">1</span>) <span class="comment">// 设置种子数</span></span><br><span class="line">    num3 = rand.Intn(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 时间戳</span></span><br><span class="line">    timeStamp1 = time.Now().Unix()</span><br><span class="line">    timeStamp2 = time.Now().UnixNano()</span><br><span class="line"></span><br><span class="line">    rand.Seed(timeStamp2) <span class="comment">// 根据时间戳设置随机种子</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 生成区间随机数</span></span><br><span class="line">    num4 = rand.Intn(<span class="number">5</span>) + <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="数组定义"><a href="#数组定义" class="headerlink" title="数组定义"></a>数组定义</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> variable_name [SIZE] variable_type</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> balance1 [<span class="number">10</span>] float <span class="number">32</span></span><br><span class="line"><span class="keyword">var</span> balance2 = [<span class="number">5</span>] floart32&#123;<span class="number">100.0</span>, <span class="number">2.0</span>, <span class="number">3.14</span>, <span class="number">7.0</span>, <span class="number">99.9</span>&#125;</span><br><span class="line">d := [...] <span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">e := [<span class="number">5</span>] <span class="keyword">int</span>&#123;<span class="number">4</span>: <span class="number">100</span>&#125; <span class="comment">// [0,0,0,0,100]</span></span><br><span class="line"></span><br><span class="line">arrayLen := <span class="built_in">len</span>(balance1) <span class="comment">// 容器中已存储的数据量</span></span><br><span class="line">arrayCap := <span class="built_in">cap</span>(balance1) <span class="comment">// 容器中能够存储的最大的数量</span></span><br><span class="line"></span><br><span class="line">fmt.Printf(<span class="string">&quot;%p\n&quot;</span>, &amp;balance1) <span class="comment">// 获取数组的地址</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a := [...]<span class="keyword">float64</span>&#123;<span class="number">5.5</span>, <span class="number">6.6</span>&#125;</span><br><span class="line"><span class="keyword">for</span> i, v := <span class="keyword">range</span> a &#123;</span><br><span class="line">    fmt.Println(i, v)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>数组是值类型 理解为存储的数值本身</p>
+</blockquote>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a2 := [<span class="number">3</span>][<span class="number">4</span>]<span class="keyword">int</span>&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;, &#123;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>&#125;, &#123;<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Slice"><a href="#Slice" class="headerlink" title="Slice"></a>Slice</h2><h3 id="切片定义"><a href="#切片定义" class="headerlink" title="切片定义"></a>切片定义</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> identifier []<span class="keyword">type</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> slice1 []<span class="keyword">type</span> = <span class="built_in">make</span>([]<span class="keyword">type</span>, <span class="built_in">len</span>)</span><br><span class="line"><span class="comment">// 简写</span></span><br><span class="line">slice2 := <span class="built_in">make</span>([]<span class="keyword">type</span>, <span class="built_in">len</span>)</span><br><span class="line"></span><br><span class="line">slice2 = <span class="built_in">append</span>(slice2, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">slice2 = <span class="built_in">append</span>(slice2, slice1...) <span class="comment">// 加上...代表添加里面的元素</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以从数组初始化切片，切片是引用类型，改变数组内容，切片内容会一起改变。<br>如果切片容量不够，会重新拷贝一份数组，这是数组改变不会影响切片内容。</p>
+</blockquote>
+<h2 id="深拷贝和浅拷贝"><a href="#深拷贝和浅拷贝" class="headerlink" title="深拷贝和浅拷贝"></a>深拷贝和浅拷贝</h2><ul>
+<li>值语义 拷贝值 深拷贝</li>
+<li>引用语义 拷贝地址 浅拷贝</li>
+</ul>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p>Map通过hash表实现</p>
+<p>使用<code>make()</code>函数创建，方法类似Slice。不初始化会创建一个nil map。nil map不能用来存放键值对</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> map1 <span class="keyword">map</span>[key_type]value_type <span class="comment">// 声明</span></span><br><span class="line"><span class="keyword">var</span> map2 = <span class="built_in">make</span>(<span class="keyword">map</span>[key_type]value_type) <span class="comment">// 声明并初始化</span></span><br><span class="line"></span><br><span class="line">map2[<span class="number">40</span>] <span class="comment">// key不存在获取默认值</span></span><br><span class="line">value, ok := <span class="keyword">map</span>[key] <span class="comment">// 判断key是否存在</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">map</span>[<span class="number">3</span>] = <span class="number">40</span> <span class="comment">// key存在修改，不存在添加</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">delete</span>(map2, <span class="number">4</span>) <span class="comment">// 删除键值对，不存在不影响</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">len</span>(map2) <span class="comment">// 获取map长度</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>map是引用类型的数据类型</p>
+</blockquote>
+<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><p>语法：””, ``</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 := <span class="string">&quot;hello中国&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">len</span>(s1) <span class="comment">// 11 获取的是字节个数</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="strings包"><a href="#strings包" class="headerlink" title="strings包"></a>strings包</h2><p>使用string的方法需要导包<code>import &quot;strings&quot;</code></p>
+<h2 id="strconv包"><a href="#strconv包" class="headerlink" title="strconv包"></a>strconv包</h2><p>实现字符串和基本数据类型进行转换</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/28/Python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/28/Python-%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">Python-排序算法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-28 20:17:18" itemprop="dateCreated datePublished" datetime="2019-09-28T20:17:18+08:00">2019-09-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="顺序查找（Sequence-Search）"><a href="#顺序查找（Sequence-Search）" class="headerlink" title="顺序查找（Sequence Search）"></a>顺序查找（Sequence Search）</h2><p>顺序查找是按照序列原有顺序对数组进行遍历比较查询的基本查找算法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">seq_search</span>(<span class="params">items, elem</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;顺序查找&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> index, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(items):</span><br><span class="line">        <span class="keyword">if</span> item == elem:</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二分查找-折半查找（Binary-Search）"><a href="#二分查找-折半查找（Binary-Search）" class="headerlink" title="二分查找/折半查找（Binary Search）"></a>二分查找/折半查找（Binary Search）</h2><p>二分查找是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bin_search</span>(<span class="params">items, elem</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;折半查找(二分查找)&quot;&quot;&quot;</span></span><br><span class="line">    start, end = <span class="number">0</span>, <span class="built_in">len</span>(items) - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> start &lt;= end:</span><br><span class="line">        mid = (start + end) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> elem &lt; items[mid]: end = mid - <span class="number">1</span> <span class="keyword">elif</span> elem &gt; items[mid]:</span><br><span class="line">            start = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="冒泡排序（Bubble-Sort）"><a href="#冒泡排序（Bubble-Sort）" class="headerlink" title="冒泡排序（Bubble Sort）"></a>冒泡排序（Bubble Sort）</h2><p>冒泡排序是一种计算机科学领域的较简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 实现排序自定义，避免极端情况，正向逆向都比较一次</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span>(<span class="params">origin_items, *, comp=<span class="keyword">lambda</span> x, y: x &gt; y</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;冒泡排序&quot;&quot;&quot;</span></span><br><span class="line">    items = origin_items[:]</span><br><span class="line">    length = <span class="built_in">len</span>(items)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, length):</span><br><span class="line">        swapped = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, length - i):</span><br><span class="line">            <span class="keyword">if</span> comp(items[j], items[j + <span class="number">1</span>]):</span><br><span class="line">                items[j], items[j + <span class="number">1</span>] = items[j + <span class="number">1</span>], items[j]</span><br><span class="line">                swapped = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> swapped:</span><br><span class="line">            swapped = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(length - i - <span class="number">1</span>, i - <span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> comp(items[j - <span class="number">1</span>], items[j]):</span><br><span class="line">                    items[j - <span class="number">1</span>], items[j] = items[j], items[j - <span class="number">1</span>]</span><br><span class="line">                    swapped = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> swapped:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> items</span><br></pre></td></tr></table></figure>
+
+<h2 id="归并排序（Merge-Sort）"><a href="#归并排序（Merge-Sort）" class="headerlink" title="归并排序（Merge Sort）"></a>归并排序（Merge Sort）</h2><p>归并排序是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge</span>(<span class="params">list1, list2, comp=<span class="keyword">lambda</span> x, y: x &lt;= y</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;&quot;有序合并(将两个有序的列表合并成一个新的有序的列表)&quot;&quot;&quot;</span></span><br><span class="line">    list3 = []</span><br><span class="line">    index1, index2 = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> index1 &lt; <span class="built_in">len</span>(list1) <span class="keyword">and</span> index2 &lt; <span class="built_in">len</span>(list2):</span><br><span class="line">        <span class="keyword">if</span> comp(list1[index1], list2[index2]):</span><br><span class="line">            list3.append(list1[index1])</span><br><span class="line">            index1 += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            list3.append(list2[index2])</span><br><span class="line">            index2 += <span class="number">1</span></span><br><span class="line">    list3 += list1[index1:]</span><br><span class="line">    list3 += list2[index2:]</span><br><span class="line">    <span class="keyword">return</span> list3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span>(<span class="params">origin_items, comp=<span class="keyword">lambda</span> x, y: x &lt;= y</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;归并排序&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(origin_items) &lt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> origin_items[:]</span><br><span class="line">    mid = <span class="built_in">len</span>(origin_items) // <span class="number">2</span></span><br><span class="line">    left = merge_sort(origin_items[:mid], comp)</span><br><span class="line">    right = merge_sort(origin_items[mid:], comp)</span><br><span class="line">    <span class="keyword">return</span> merge(left, right, comp)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/28/Python%E2%80%93zlib-hashlib-rsa/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/28/Python%E2%80%93zlib-hashlib-rsa/" class="post-title-link" itemprop="url">Python–zlib/hashlib/rsa</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-28 20:11:21" itemprop="dateCreated datePublished" datetime="2019-09-28T20:11:21+08:00">2019-09-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="zlib-数据压缩解压缩库"><a href="#zlib-数据压缩解压缩库" class="headerlink" title="zlib-数据压缩解压缩库"></a>zlib-数据压缩解压缩库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zlib</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_to_file</span>(<span class="params">data</span>):</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;begin_file.txt&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># zlib.compress 用来压缩字符串的bytes类型</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str_zlib</span>():</span></span><br><span class="line">    response = requests.get(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line">    message = response.text</span><br><span class="line">    bytes_message = <span class="built_in">str</span>.encode(message)</span><br><span class="line">    save_to_file(bytes_message)</span><br><span class="line">    compressed = zlib.compress(bytes_message, zlib.Z_BEST_COMPRESSION)</span><br><span class="line">    decompressed = zlib.decompress(compressed)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;original string:&quot;</span>, <span class="built_in">len</span>(message))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;original bytes:&quot;</span>, <span class="built_in">len</span>(bytes_message))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;compressed:&quot;</span>, <span class="built_in">len</span>(compressed))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;decompressed:&quot;</span>, <span class="built_in">len</span>(decompressed))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># zlib.compressobj 用来压缩数据流，用于文件传输</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">file_compress</span>(<span class="params">begin_file, zlib_file, level</span>):</span></span><br><span class="line">    infile = <span class="built_in">open</span>(begin_file, <span class="string">&quot;rb&quot;</span>)</span><br><span class="line">    zfile = <span class="built_in">open</span>(zlib_file, <span class="string">&quot;wb&quot;</span>)</span><br><span class="line">    compressobj = zlib.compressobj(level)</span><br><span class="line">    data = infile.read(<span class="number">1024</span>)</span><br><span class="line">    <span class="keyword">while</span> data:</span><br><span class="line">        zfile.write(compressobj.compress(data))</span><br><span class="line">        <span class="comment"># 继续读取文件中的下一个size的内容</span></span><br><span class="line">        data = infile.read(<span class="number">1024</span>)</span><br><span class="line">    <span class="comment"># compressobj.flush()包含剩余压缩输出的字节对象，将剩余的字节内容写入到目标文件中</span></span><br><span class="line">    zfile.write(compressobj.flush())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">file_decompress</span>(<span class="params">zlib_file, end_file</span>):</span></span><br><span class="line">    zlib_file = <span class="built_in">open</span>(zlib_file, <span class="string">&quot;rb&quot;</span>)</span><br><span class="line">    end_file = <span class="built_in">open</span>(end_file, <span class="string">&quot;wb&quot;</span>)</span><br><span class="line">    decompressobj = zlib.decompressobj()</span><br><span class="line">    data = zlib_file.read(<span class="number">1024</span>)</span><br><span class="line">    <span class="keyword">while</span> data:</span><br><span class="line">        end_file.write(decompressobj.decompress(data))</span><br><span class="line">        data = zlib_file.read(<span class="number">1024</span>)</span><br><span class="line">    end_file.write(decompressobj.flush())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    <span class="comment"># 测试字符串的压缩与解压</span></span><br><span class="line">    str_zlib()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 测试数据流压缩</span></span><br><span class="line">    begin_file = <span class="string">&quot;./begin_file.txt&quot;</span></span><br><span class="line">    zlib_file = <span class="string">&quot;./zlib_file.txt&quot;</span></span><br><span class="line">    level = <span class="number">9</span></span><br><span class="line">    file_compress(begin_file, zlib_file, level)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 测试数据流解压</span></span><br><span class="line">    zlib_file = <span class="string">&quot;./zlib_file.txt&quot;</span></span><br><span class="line">    end_file = <span class="string">&quot;./end_file.txt&quot;</span></span><br><span class="line">    file_decompress(zlib_file, end_file)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h2 id="hashlib-哈希摘要生成器"><a href="#hashlib-哈希摘要生成器" class="headerlink" title="hashlib-哈希摘要生成器"></a>hashlib-哈希摘要生成器</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha1</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha256</span><br><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> sha512</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">StreamHasher</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;哈希摘要生成器&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, algorithm=<span class="string">&#x27;md5&#x27;</span>, size=<span class="number">1024</span></span>):</span></span><br><span class="line">        self.size = size</span><br><span class="line">        alg = algorithm.lower()</span><br><span class="line">        <span class="keyword">if</span> alg == <span class="string">&#x27;md5&#x27;</span>:</span><br><span class="line">            self.hasher = md5()</span><br><span class="line">        <span class="keyword">elif</span> alg == <span class="string">&#x27;sha1&#x27;</span>:</span><br><span class="line">            self.hasher = sha1()</span><br><span class="line">        <span class="keyword">elif</span> alg == <span class="string">&#x27;sha256&#x27;</span>:</span><br><span class="line">            self.hasher = sha256()</span><br><span class="line">        <span class="keyword">elif</span> alg == <span class="string">&#x27;sha512&#x27;</span>:</span><br><span class="line">            self.hasher = sha512()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError(<span class="string">&#x27;不支持指定的摘要算法&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 魔法方法: 让对象可以像函数一样被调用</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span>(<span class="params">self, stream</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.to_digest(stream)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">to_digest</span>(<span class="params">self, stream</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;生成十六进制形式的哈希摘要字符串&quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">for</span> data <span class="keyword">in</span> <span class="built_in">iter</span>(<span class="keyword">lambda</span>: stream.read(self.size), <span class="string">b&#x27;&#x27;</span>):</span><br><span class="line">            self.hasher.update(data)</span><br><span class="line">        <span class="keyword">return</span> self.hasher.hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;主函数&quot;&quot;&quot;</span></span><br><span class="line">    hasher = StreamHasher(<span class="string">&#x27;sha1&#x27;</span>, <span class="number">4096</span>)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;Python魔法方法指南.pdf&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> stream:</span><br><span class="line">        <span class="comment"># print(hasher.to_digest(stream))</span></span><br><span class="line">        <span class="built_in">print</span>(hasher(stream))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h2 id="rsa-加密库"><a href="#rsa-加密库" class="headerlink" title="rsa-加密库"></a>rsa-加密库</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成密钥</span></span><br><span class="line">(pubkey, privkey) = rsa.newkeys(<span class="number">1024</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存密钥</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;public.pem&#x27;</span>, <span class="string">&#x27;w+&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(pubkey.save_pkcs1().decode())</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;private.pem&#x27;</span>, <span class="string">&#x27;w+&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(privkey.save_pkcs1().decode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 导入密钥</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;public.pem&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    pubkey = rsa.PublicKey.load_pkcs1(f.read().encode())</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;private.pem&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    privkey = rsa.PrivateKey.load_pkcs1(f.read().encode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 明文</span></span><br><span class="line">message = <span class="string">&#x27;zhezhendeshiyigemima&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 公钥加密</span></span><br><span class="line">crypto = rsa.encrypt(message.encode(), pubkey)</span><br><span class="line"><span class="built_in">print</span>(crypto)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 私钥解密</span></span><br><span class="line">message = rsa.decrypt(crypto, privkey).decode()</span><br><span class="line"><span class="built_in">print</span>(message)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 私钥签名</span></span><br><span class="line">signature = rsa.sign(message.encode(), privkey, <span class="string">&#x27;SHA-1&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(signature)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 公钥验证</span></span><br><span class="line">result = rsa.verify(message.encode(), signature, pubkey)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/28/Windows-Server-2012-R2-FTP-Server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/28/Windows-Server-2012-R2-FTP-Server/" class="post-title-link" itemprop="url">Windows Server 2012 R2 FTP Server</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-09-28 16:52:20" itemprop="dateCreated datePublished" datetime="2019-09-28T16:52:20+08:00">2019-09-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>打开Windows Server 2012 R2 <strong>服务器管理器界面</strong>  添加角色和功能</p>
+<p><img src="../images/2019/20190320-001.png" alt="001"></p>
+<p>添加角色和功能向导里，选择 从<strong>服务器池中选择服务器</strong></p>
+<p><img src="../images/2019/20190320-002.png" alt="002"></p>
+<p>选择Web 服务器（IIS）<strong>安装 FTP服务器</strong></p>
+<p><img src="../images/2019/20190320-003.png" alt="003"></p>
+<p>安装完成后，在服务器管理器右上角有个点击 “<strong>工具</strong>”–&gt;选择“<strong>IIS管理器</strong>”</p>
+<p><img src="../images/2019/20190320-004.png" alt="004"></p>
+<p>点击<strong>IIS 服务器证书</strong></p>
+<p><img src="../images/2019/20190320-005.png" alt="005"></p>
+<p>FTP界面上选择“<strong>FTP身份验证</strong>”——&gt;“<strong>基本身份验证</strong>”–&gt;”启用”</p>
+<p><img src="../images/2019/20190320-006.png" alt="006"></p>
+<p>FTP界面选择 “<strong>FTP授权规则</strong>“—&gt;右侧“<strong>添加允许规则</strong>”–&gt;选择“<strong>指定的角色或用户组</strong>”,以及权限选择，“<strong>读取 写入</strong></p>
+<p><img src="../images/2019/20190320-007.png" alt="007"></p>
+<p>完成所有前戏后，接下来就开始进行建立FTP网站，点击IIS管理器界面 “<strong>网站</strong>”，点击右侧添加“<strong>FTP站点</strong>”，FTP站点名称可以任意取，内容目录为服务器上提供上传、下载文件保存目录。</p>
+<p><img src="../images/2019/20190320-008.png" alt="008"></p>
+<p>点击“<strong>下一步</strong>”绑定IP可以选取指定IP，也可以默认，端口号默认21，勾选下面“<strong>自动启动FTP站点</strong>”导入刚才建立的SSL证书</p>
+<p><img src="../images/2019/20190320-009.png" alt="009"></p>
+<p>点击“<strong>下一步</strong>”身份验证和授权信息配置</p>
+<p><img src="../images/2019/20190320-010.png" alt="010"></p>
+<p>配置完成（浏览器和FTP客户端软件上登陆）</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ftp://<span class="title">ip</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"># 提示输入账户密码</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 </div>
   </main>
