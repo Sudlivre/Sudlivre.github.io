@@ -1,0 +1,53 @@
+
+############# next setting ############
+# Allow to cache content generation.
+cache:
+  enable: true
+
+# Remove unnecessary files after hexo generate.
+minify: true
+
+# scheme: Muse
+#scheme: Mist
+# scheme: Pisces
+scheme: Gemini
+
+darkmode: true
+
+# favicon:
+#   small: /images/favicon-16x16-next.png
+#   medium: /images/favicon-32x32-next.png
+#   apple_touch_icon: /images/apple-touch-icon-next.png
+#   safari_pinned_tab: /images/logo.svg
+#   android_manifest: /images/manifest.json
+
+
+# custom_logo: /uploads/custom-logo.jpg
+
+creative_commons:
+  license: by-nc-sa
+  size: small
+  sidebar: true
+  post: true
+  language: deed.zh
+
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tag
+  about: /about/ || fa fa-user
+  commonweal: /404/ || fa fa-heartbeat
+  # Docs:
+  #   default: /docs/ || fa fa-book
+  #   Getting Started:
+  #     default: /getting-started/ || fa fa-flag
+  #     Installation: /installation.html || fa fa-download
+  #     Configuration: /configuration.html || fa fa-wrench
+  #   Third Party Services:
+  #     default: /third-party-services/ || fa fa-puzzle-piece
+  #     Math Equations: /math-equations.html || fa fa-square-root-alt
+  #     Comment Systems: /comments.html || fa fa-comment-alt
+
+menu_settings:
+  icons: true
