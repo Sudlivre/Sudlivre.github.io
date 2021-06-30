@@ -6,7 +6,7 @@ comments: false
 
 ### 三思十二
 
-三思十二（ssshier）-- 一个热爱技术的玩家
+三思十二（ssshier）-- Coder
 
 Python, Java, Linux。
 

@@ -24,6 +24,11 @@ darkmode: true
 
 # custom_logo: /uploads/custom-logo.jpg
 
+social:
+  Github: https://github.com/ssshier
+follow_me:
+  Github: https://github.com/ssshier || fab fa-github
+
 creative_commons:
   license: by-nc-sa
   size: small
@@ -51,3 +56,11 @@ menu:
 
 menu_settings:
   icons: true
+
+
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: false
+  # Scroll percent label in b2t button.
+  scrollpercent: true
