@@ -64,3 +64,27 @@ back2top:
   sidebar: false
   # Scroll percent label in b2t button.
   scrollpercent: true
+
+
+
+# # JavaScript 3D library.
+# # Dependencies: https://github.com/next-theme/hexo-next-three
+# three:
+#   enable: true
+#   defer: true
+#   cdn:
+#   waves:
+#     enable: false
+#     cdn:
+#   lines:
+#     enable: false
+#     cdn:
+#   sphere:
+#     enable: false
+#     cdn:
+
+# # JavaScript library for reading EXIF image metadata.
+# # For more information: https://github.com/exif-js/exif-js
+# exif:
+#   enable: true
+#   template: "{FocalLength}mm f/{FNumber} {ExposureTime}s"
