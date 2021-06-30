@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -19,14 +19,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ssshier.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() &amp;#123;    &#x2F;&#x2F; file文件操作    fileInfo, err :&#x3D; os.Stat(&quot;aaa.txt&quot;)    if err !&#x3D; nil &amp;#123;        fmt.Println(&quot;error">
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ssshier.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
+<meta name="description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() {    &#x2F;&#x2F; file文件操作    fileInfo, err :&#x3D; os.Stat(&quot;aaa.txt&quot;)    if err !&#x3D; nil {        fmt.Println(&quot;error&quot;)        return    }">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Golang进阶实战之IO操作">
+<meta property="og:title" content="Golang 进阶实战之 IO 操作">
 <meta property="og:url" content="https://ssshier.github.io/2019/10/03/15-33-33/index.html">
 <meta property="og:site_name" content="三思十二">
-<meta property="og:description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() &amp;#123;    &#x2F;&#x2F; file文件操作    fileInfo, err :&#x3D; os.Stat(&quot;aaa.txt&quot;)    if err !&#x3D; nil &amp;#123;        fmt.Println(&quot;error">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:description" content="文件读写12345678910111213141516171819202122232425262728293031323334func main() {    &#x2F;&#x2F; file文件操作    fileInfo, err :&#x3D; os.Stat(&quot;aaa.txt&quot;)    if err !&#x3D; nil {        fmt.Println(&quot;error&quot;)        return    }">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-03T07:33:33.000Z">
 <meta property="article:modified_time" content="2021-06-29T15:43:22.847Z">
 <meta property="article:author" content="ssshier">
@@ -39,10 +39,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ssshier.github.io&#x2F;2019&#x2F;10&#x2F;03&#x2F;15-33-33&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;10&#x2F;03&#x2F;15-33-33&#x2F;&quot;,&quot;title&quot;:&quot;Golang进阶实战之IO操作&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ssshier.github.io&#x2F;2019&#x2F;10&#x2F;03&#x2F;15-33-33&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;10&#x2F;03&#x2F;15-33-33&#x2F;&quot;,&quot;title&quot;:&quot;Golang 进阶实战之 IO 操作&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Golang进阶实战之IO操作 | 三思十二</title>
+<title>Golang 进阶实战之 IO 操作 | 三思十二</title>
   
 
 
@@ -60,7 +60,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -87,12 +87,12 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tag fa-fw"></i>标签</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tag fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
   </ul>
 </nav>
 
@@ -113,17 +113,17 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          Overview
         </li>
       </ul>
 
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">1.</span> <span class="nav-text">文件读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%86%99"><span class="nav-number">2.</span> <span class="nav-text">数据读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io%E7%9B%B8%E5%85%B3"><span class="nav-number">3.</span> <span class="nav-text">io相关</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99"><span class="nav-number">1.</span> <span class="nav-text">文件读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%86%99"><span class="nav-number">2.</span> <span class="nav-text">数据读写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io%E7%9B%B8%E5%85%B3"><span class="nav-number">3.</span> <span class="nav-text">io 相关</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,20 +138,20 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">标签</span></a>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -176,7 +176,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -196,7 +196,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/10/03/15-33-33/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Golang进阶实战之IO操作
+          Golang 进阶实战之 IO 操作
         </h1>
 
         <div class="post-meta-container">
@@ -219,28 +219,44 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">发表于</span>
+      <span class="post-meta-item-text">Posted on</span>
 
-      <time title="创建时间：2019-10-03 15:33:33" itemprop="dateCreated datePublished" datetime="2019-10-03T15:33:33+08:00">2019-10-03</time>
+      <time title="Created: 2019-10-03 15:33:33" itemprop="dateCreated datePublished" datetime="2019-10-03T15:33:33+08:00">2019-10-03</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">分类于</span>
+      <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
         </span>
     </span>
 
   
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>2 mins.</span>
+    </span>
 </div>
 
         </div>
@@ -250,11 +266,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// file文件操作</span></span><br><span class="line">    fileInfo, err := os.Stat(<span class="string">&quot;aaa.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(fileInfo)</span><br><span class="line">    fmt.Println(fileInfo.Name())</span><br><span class="line">    fmt.Println(fileInfo.Size())</span><br><span class="line">    fmt.Println(fileInfo.IsDir())</span><br><span class="line">    <span class="comment">// 文件权限</span></span><br><span class="line">    fmt.Println(fileInfo.Mode())</span><br><span class="line">    fmt.Println(fileInfo.ModTime())</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 路径</span></span><br><span class="line">    fileName1 := <span class="string">&quot;aaa.txt&quot;</span></span><br><span class="line">    fmt.Println(filepath.Abs(fileName1))</span><br><span class="line">    fmt.Println(filepath.IsAbs(fileName1))</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建目录</span></span><br><span class="line">    err = os.MkdirAll(<span class="string">&quot;aa&quot;</span>, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 创建Create 打开Open OpenFile 关闭Close 删除Remove RemoveAll</span></span><br><span class="line">    file, err2 := os.Create(<span class="string">&quot;fileName2.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">        fmt.Println(<span class="string">&quot;error&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(file)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h2><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="comment">// file文件操作</span></span><br><span class="line">    fileInfo, err := os.Stat(<span class="string">"aaa.txt"</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">"error"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    fmt.Println(fileInfo)</span><br><span class="line">    fmt.Println(fileInfo.Name())</span><br><span class="line">    fmt.Println(fileInfo.Size())</span><br><span class="line">    fmt.Println(fileInfo.IsDir())</span><br><span class="line">    <span class="comment">// 文件权限</span></span><br><span class="line">    fmt.Println(fileInfo.Mode())</span><br><span class="line">    fmt.Println(fileInfo.ModTime())</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 路径</span></span><br><span class="line">    fileName1 := <span class="string">"aaa.txt"</span></span><br><span class="line">    fmt.Println(filepath.Abs(fileName1))</span><br><span class="line">    fmt.Println(filepath.IsAbs(fileName1))</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建目录</span></span><br><span class="line">    err = os.MkdirAll(<span class="string">"aa"</span>, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">"error"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    <span class="comment">// 创建Create 打开Open OpenFile 关闭Close 删除Remove RemoveAll</span></span><br><span class="line">    file, err2 := os.Create(<span class="string">"fileName2.txt"</span>)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">"error"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    fmt.Println(file)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="数据读写"><a href="#数据读写" class="headerlink" title="数据读写"></a>数据读写</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// io</span></span><br><span class="line">    <span class="comment">// 读取数据: Read</span></span><br><span class="line">    file, err := os.Open(<span class="string">&quot;aaa.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">    bs := <span class="built_in">make</span>([]<span class="keyword">byte</span>, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">    <span class="comment">//n, err := file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line"></span><br><span class="line">    n := <span class="number">-1</span></span><br><span class="line">    <span class="keyword">for</span> &#123;</span><br><span class="line">        n, err = file.Read(bs)</span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span> || err == io.EOF &#123;</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">        fmt.Println(<span class="keyword">string</span>(bs[:n]))</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入数据: Write</span></span><br><span class="line">    file2, err2 := os.OpenFile(<span class="string">&quot;bbb.txt&quot;</span>, os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> file2.Close()</span><br><span class="line">    bs2 := []<span class="keyword">byte</span>&#123;<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>&#125;</span><br><span class="line">    n2, err4 := file2.Write(bs2)</span><br><span class="line">    <span class="keyword">if</span> err4 != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    fmt.Println(n2)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="数据读写"><a href="#数据读写" class="headerlink" title="数据读写"></a>数据读写</h2><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="comment">// io</span></span><br><span class="line">    <span class="comment">// 读取数据: Read</span></span><br><span class="line">    file, err := os.Open(<span class="string">"aaa.txt"</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> {</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">defer</span> file.Close()</span><br><span class="line"></span><br><span class="line">    bs := <span class="built_in">make</span>([]<span class="keyword">byte</span>, <span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">    <span class="comment">//n, err := file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">//n, err = file.Read(bs)</span></span><br><span class="line">    <span class="comment">//println(err)</span></span><br><span class="line">    <span class="comment">//println(n)</span></span><br><span class="line">    <span class="comment">//println(string(bs))</span></span><br><span class="line"></span><br><span class="line">    n := <span class="number">-1</span></span><br><span class="line">    <span class="keyword">for</span> {</span><br><span class="line">        n, err = file.Read(bs)</span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span> || err == io.EOF {</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        }</span><br><span class="line">        fmt.Println(<span class="keyword">string</span>(bs[:n]))</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入数据: Write</span></span><br><span class="line">    file2, err2 := os.OpenFile(<span class="string">"bbb.txt"</span>, os.O_CREATE|os.O_WRONLY|os.O_APPEND, os.ModePerm)</span><br><span class="line">    <span class="keyword">if</span> err2 != <span class="literal">nil</span> {</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">defer</span> file2.Close()</span><br><span class="line">    bs2 := []<span class="keyword">byte</span>{<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>}</span><br><span class="line">    n2, err4 := file2.Write(bs2)</span><br><span class="line">    <span class="keyword">if</span> err4 != <span class="literal">nil</span> {</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    }</span><br><span class="line">    fmt.Println(n2)</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="io相关"><a href="#io相关" class="headerlink" title="io相关"></a>io相关</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// copy</span></span><br><span class="line">    <span class="comment">// 可以用Read和Write利用切片实现复制文件</span></span><br><span class="line">    <span class="comment">// io.Copy()</span></span><br><span class="line">    <span class="comment">// ioutil.ReadFile() ioutil.WriteFile()</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Seek接口设置读写文件偏移量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 断点续传 ；利用临时文件记录传输了多少数据</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// bufio 添加缓冲区 提高io效率</span></span><br><span class="line">    <span class="comment">// buifo.NewReader(file)</span></span><br><span class="line">    <span class="comment">// Flush() 刷新缓冲区</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="io相关"><a href="#io相关" class="headerlink" title="io相关"></a>io 相关</h2><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="comment">// copy</span></span><br><span class="line">    <span class="comment">// 可以用Read和Write利用切片实现复制文件</span></span><br><span class="line">    <span class="comment">// io.Copy()</span></span><br><span class="line">    <span class="comment">// ioutil.ReadFile() ioutil.WriteFile()</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Seek接口设置读写文件偏移量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 断点续传 ；利用临时文件记录传输了多少数据</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// bufio 添加缓冲区 提高io效率</span></span><br><span class="line">    <span class="comment">// buifo.NewReader(file)</span></span><br><span class="line">    <span class="comment">// Flush() 刷新缓冲区</span></span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
     </div>
 
@@ -268,20 +284,20 @@
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>本文作者： </strong>ssshier
+      <strong>Post author:  </strong>ssshier
   </li>
   <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://ssshier.github.io/2019/10/03/15-33-33/" title="Golang进阶实战之IO操作">https://ssshier.github.io/2019/10/03/15-33-33/</a>
+      <strong>Post link: </strong>
+      <a href="https://ssshier.github.io/2019/10/03/15-33-33/" title="Golang 进阶实战之 IO 操作">https://ssshier.github.io/2019/10/03/15-33-33/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
   </li>
 </ul>
 </div>
 
           <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
+  <span>Welcome to my other publishing channels</span>
 
   <div class="social-list">
 
@@ -306,13 +322,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/09/30/10-58-32/" rel="prev" title="Golang基础语法之六">
-                  <i class="fa fa-chevron-left"></i> Golang基础语法之六
+                <a href="/2019/09/30/10-58-32/" rel="prev" title="Golang 基础语法之六">
+                  <i class="fa fa-chevron-left"></i> Golang 基础语法之六
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/10/03/16-03-27/" rel="next" title="Golang进阶实战之并发">
-                  Golang进阶实战之并发 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/10/03/16-03-27/" rel="next" title="Golang 进阶实战之并发">
+                  Golang 进阶实战之并发 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -340,7 +356,21 @@
   </span>
   <span class="author" itemprop="copyrightHolder">ssshier</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Symbols count total">18k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">17 mins.</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>

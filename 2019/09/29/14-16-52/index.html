@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -19,14 +19,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ssshier.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="函数函数定义123456&#x2F;&#x2F; 声明func FuncName() &amp;#123;    return&amp;#125;&#x2F;&#x2F; 调用FuncName()  函数调用的实参和形参必须一一对应，顺序，个数，类型 可变参数123456789func myFunc(arg ...int) &amp;#123;    for _, n :&#x3D; range arg &amp;#123;        fmt.Println(n)    &amp;">
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ssshier.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
+<meta name="description" content="函数函数定义123456&#x2F;&#x2F; 声明func FuncName() {    return}&#x2F;&#x2F; 调用FuncName()  函数调用的实参和形参必须一一对应，顺序，个数，类型 可变参数123456789func myFunc(arg ...int) {    for _, n :&#x3D; range arg {        fmt.Println(n)    }}myFunc(2,3,4)s1 :&#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Golang基础语法之四">
+<meta property="og:title" content="Golang 基础语法之四">
 <meta property="og:url" content="https://ssshier.github.io/2019/09/29/14-16-52/index.html">
 <meta property="og:site_name" content="三思十二">
-<meta property="og:description" content="函数函数定义123456&#x2F;&#x2F; 声明func FuncName() &amp;#123;    return&amp;#125;&#x2F;&#x2F; 调用FuncName()  函数调用的实参和形参必须一一对应，顺序，个数，类型 可变参数123456789func myFunc(arg ...int) &amp;#123;    for _, n :&#x3D; range arg &amp;#123;        fmt.Println(n)    &amp;">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:description" content="函数函数定义123456&#x2F;&#x2F; 声明func FuncName() {    return}&#x2F;&#x2F; 调用FuncName()  函数调用的实参和形参必须一一对应，顺序，个数，类型 可变参数123456789func myFunc(arg ...int) {    for _, n :&#x3D; range arg {        fmt.Println(n)    }}myFunc(2,3,4)s1 :&#x3D;">
+<meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-09-29T06:16:52.000Z">
 <meta property="article:modified_time" content="2021-06-29T15:43:22.844Z">
 <meta property="article:author" content="ssshier">
@@ -39,10 +39,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ssshier.github.io&#x2F;2019&#x2F;09&#x2F;29&#x2F;14-16-52&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;09&#x2F;29&#x2F;14-16-52&#x2F;&quot;,&quot;title&quot;:&quot;Golang基础语法之四&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ssshier.github.io&#x2F;2019&#x2F;09&#x2F;29&#x2F;14-16-52&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;09&#x2F;29&#x2F;14-16-52&#x2F;&quot;,&quot;title&quot;:&quot;Golang 基础语法之四&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Golang基础语法之四 | 三思十二</title>
+<title>Golang 基础语法之四 | 三思十二</title>
   
 
 
@@ -60,7 +60,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -87,12 +87,12 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tag fa-fw"></i>标签</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tag fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
   </ul>
 </nav>
 
@@ -113,10 +113,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          Overview
         </li>
       </ul>
 
@@ -138,20 +138,20 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span></a>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
         <span class="site-state-item-count">9</span>
-        <span class="site-state-item-name">标签</span></a>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -176,7 +176,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
+  <div class="back-to-top" role="button" aria-label="Back to top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -196,7 +196,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/29/14-16-52/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Golang基础语法之四
+          Golang 基础语法之四
         </h1>
 
         <div class="post-meta-container">
@@ -219,28 +219,44 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">发表于</span>
+      <span class="post-meta-item-text">Posted on</span>
 
-      <time title="创建时间：2019-09-29 14:16:52" itemprop="dateCreated datePublished" datetime="2019-09-29T14:16:52+08:00">2019-09-29</time>
+      <time title="Created: 2019-09-29 14:16:52" itemprop="dateCreated datePublished" datetime="2019-09-29T14:16:52+08:00">2019-09-29</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">分类于</span>
+      <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
         </span>
     </span>
 
   
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>816</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
 </div>
 
         </div>
@@ -250,23 +266,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">FuncName</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">FuncName()</span><br></pre></td></tr></table></figure>
+        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">FuncName</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">FuncName()</span><br></pre></td></tr></tbody></table></figure>
 
 <p>函数调用的实参和形参必须一一对应，顺序，个数，类型</p>
-<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">myFunc</span><span class="params">(arg ...<span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> _, n := <span class="keyword">range</span> arg &#123;</span><br><span class="line">        fmt.Println(n)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myFunc(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">s1 := []<span class="keyword">int</span>&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">34</span>,<span class="number">5</span>&#125;</span><br><span class="line">myFunc(s1...)</span><br></pre></td></tr></table></figure>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">myFunc</span><span class="params">(arg ...<span class="keyword">int</span>)</span></span> {</span><br><span class="line">    <span class="keyword">for</span> _, n := <span class="keyword">range</span> arg {</span><br><span class="line">        fmt.Println(n)</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">myFunc(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">s1 := []<span class="keyword">int</span>{<span class="number">1</span>,<span class="number">2</span>,<span class="number">34</span>,<span class="number">5</span>}</span><br><span class="line">myFunc(s1...)</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><ul>
 <li>值传递 传递的是参数的副本</li>
 <li>引用传递 传递的是参数的地址</li>
 </ul>
 <h3 id="函数中变量的作用域"><a href="#函数中变量的作用域" class="headerlink" title="函数中变量的作用域"></a>函数中变量的作用域</h3><p>作用域在函数中</p>
-<h2 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h2><p>延迟函数或者方法的执行，等待外围函数执行完在执行defer中的内容。</p>
-<p>如果存在多个defer，执行defer依据类似栈结构，先进后出。</p>
-<p>defer函数调用时，函数的参数已经传递。</p>
+<h2 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h2><p>延迟函数或者方法的执行，等待外围函数执行完在执行 defer 中的内容。</p>
+<p>如果存在多个 defer，执行 defer 依据类似栈结构，先进后出。</p>
+<p>defer 函数调用时，函数的参数已经传递。</p>
 <p>当外围函数中的语句正常执行完毕时，只有其中所有的延迟函数都执行完毕，外围函数才会真正的结束执行。</p>
-<p>当执行外围函数中的return语句时，只有其中所有的延迟函数都执行完毕后，外围函数才会真正返回。当外围函数中的代码引发运行恐慌时，只有其中所有延迟函数都执行完毕后，该运行时恐慌才会被扩展至调用函数。</p>
-<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>Golang支持函数式编程</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line">func3 = <span class="function"><span class="keyword">func</span> <span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当执行外围函数中的 return 语句时，只有其中所有的延迟函数都执行完毕后，外围函数才会真正返回。当外围函数中的代码引发运行恐慌时，只有其中所有延迟函数都执行完毕后，该运行时恐慌才会被扩展至调用函数。</p>
+<h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>Golang 支持函数式编程</p>
+<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"aaa"</span>)</span><br><span class="line">}()</span><br><span class="line"></span><br><span class="line">func3 = <span class="function"><span class="keyword">func</span> <span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"aaa"</span>)</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><p>函数作为另一个函数的参数，发生调用。</p>
 <h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>一个外层函数中，有内层函数，该内层函数中，会操作外层函数的局部变量，并且该外层函数的返回值就是这个内层函数。</p>
@@ -285,20 +301,20 @@
 <div class="post-copyright">
 <ul>
   <li class="post-copyright-author">
-      <strong>本文作者： </strong>ssshier
+      <strong>Post author:  </strong>ssshier
   </li>
   <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://ssshier.github.io/2019/09/29/14-16-52/" title="Golang基础语法之四">https://ssshier.github.io/2019/09/29/14-16-52/</a>
+      <strong>Post link: </strong>
+      <a href="https://ssshier.github.io/2019/09/29/14-16-52/" title="Golang 基础语法之四">https://ssshier.github.io/2019/09/29/14-16-52/</a>
   </li>
   <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
   </li>
 </ul>
 </div>
 
           <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
+  <span>Welcome to my other publishing channels</span>
 
   <div class="social-list">
 
@@ -323,13 +339,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/09/29/09-28-06/" rel="prev" title="Golang基础语法之三">
-                  <i class="fa fa-chevron-left"></i> Golang基础语法之三
+                <a href="/2019/09/29/09-28-06/" rel="prev" title="Golang 基础语法之三">
+                  <i class="fa fa-chevron-left"></i> Golang 基础语法之三
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/09/29/17-03-35/" rel="next" title="Golang基础语法之五">
-                  Golang基础语法之五 <i class="fa fa-chevron-right"></i>
+                <a href="/2019/09/29/17-03-35/" rel="next" title="Golang 基础语法之五">
+                  Golang 基础语法之五 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -357,7 +373,21 @@
   </span>
   <span class="author" itemprop="copyrightHolder">ssshier</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Symbols count total">18k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">17 mins.</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>
