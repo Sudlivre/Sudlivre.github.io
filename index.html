@@ -133,20 +133,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -183,6 +183,108 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2021/07/01/20-00-00/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python, Java, Linux。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/07/01/20-00-00/" class="post-title-link" itemprop="url">K8S</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-07-01 20:00:00 / Modified: 20:05:50" itemprop="dateCreated datePublished" datetime="2021-07-01T20:00:00+08:00">2021-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/K8S/" itemprop="url" rel="index"><span itemprop="name">K8S</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>2 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Install-on-macOS"><a href="#Install-on-macOS" class="headerlink" title="Install on macOS"></a>Install on macOS</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> https://minikube.sigs.k8s.io/docs/start/</span></span><br><span class="line">brew install kubectl</span><br><span class="line">brew install minikube</span><br><span class="line">kubectl version --client</span><br><span class="line">minikube version</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">minikube start --driver=virtualbox --image-mirror-country cn --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers</span><br><span class="line">minikube status</span><br><span class="line">minikube dashboard</span><br><span class="line"></span><br><span class="line">kubectl get pods --all-namespaces</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> describe</span></span><br><span class="line">kubectl describe pods dashboard-metrics-scraper-8554f74445-qcf2t -n kubernetes-dashboard</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> minikube dashboard 503</span></span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/storage-provisioner:v4 registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-minikube/storage-provisioner:v4</span><br><span class="line"></span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/metrics-scraper:v1.0.4 registry.cn-hangzhou.aliyuncs.com/google_containers/kubernetesui/metrics-scraper:v1.0.4</span><br><span class="line"></span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/dashboard:v2.1.0 registry.cn-hangzhou.aliyuncs.com/google_containers/kubernetesui/dashboard:v2.1.0</span><br></pre></td></tr></tbody></table></figure>
+
+
+
+<h2 id="Docker-tag"><a href="#Docker-tag" class="headerlink" title="Docker tag"></a>Docker tag</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hongdada/p/11395200.html">https://www.cnblogs.com/hongdada/p/11395200.html</a></p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">MY_REGISTRY=gcr.azk8s.cn/google-containers</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> pull image</span></span><br><span class="line">docker pull ${MY_REGISTRY}/kube-apiserver:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/kube-controller-manager:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/kube-scheduler:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/kube-proxy:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/pause:3.1</span><br><span class="line">docker pull ${MY_REGISTRY}/etcd:3.3.10</span><br><span class="line">docker pull ${MY_REGISTRY}/coredns:1.3.1</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tag</span></span><br><span class="line">docker tag ${MY_REGISTRY}/kube-apiserver:v1.15.1 k8s.gcr.io/kube-apiserver:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/kube-controller-manager:v1.15.1 k8s.gcr.io/kube-controller-manager:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/kube-scheduler:v1.15.1 k8s.gcr.io/kube-scheduler:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/kube-proxy:v1.15.1 k8s.gcr.io/kube-proxy:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/pause:3.1 k8s.gcr.io/pause:3.1</span><br><span class="line">docker tag ${MY_REGISTRY}/etcd:3.3.10 k8s.gcr.io/etcd:3.3.10</span><br><span class="line">docker tag ${MY_REGISTRY}/coredns:1.3.1 k8s.gcr.io/coredns:1.3.1</span><br><span class="line"><span class="meta"> </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> delete</span></span><br><span class="line">docker images | grep ${MY_REGISTRY} | awk '{print "docker rmi "  $1":"$2}' | sh -x</span><br><span class="line"></span><br><span class="line">echo "end"</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Create-service"><a href="#Create-service" class="headerlink" title="Create service"></a>Create service</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment hello-nginx --image=nginx --port=80</span><br><span class="line">kubectl expose deployment hello-nginx --type=NodePort --port=80</span><br><span class="line">kubectl get services hello-nginx</span><br><span class="line">minikube service hello-nginx</span><br><span class="line"></span><br><span class="line">kubectl delete services hello-nginx</span><br><span class="line">kubectl delete deployment hello-nginx</span><br></pre></td></tr></tbody></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1239,123 +1341,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/28/16-52-20/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ssshier">
-      <meta itemprop="description" content="Python, Java, Linux。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="三思十二">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/09/28/16-52-20/" class="post-title-link" itemprop="url">Windows Server 2012 R2 FTP Server</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2019-09-28 16:52:20" itemprop="dateCreated datePublished" datetime="2019-09-28T16:52:20+08:00">2019-09-28</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>441</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>打开 Windows Server 2012 R2 <strong>服务器管理器界面</strong>  添加角色和功能</p>
-<p><img src="../images/2019/20190320-001.png" alt="001"></p>
-<p>添加角色和功能向导里，选择 从<strong>服务器池中选择服务器</strong></p>
-<p><img src="../images/2019/20190320-002.png" alt="002"></p>
-<p>选择 Web 服务器（IIS）<strong>安装 FTP 服务器</strong></p>
-<p><img src="../images/2019/20190320-003.png" alt="003"></p>
-<p>安装完成后，在服务器管理器右上角有个点击 “<strong>工具</strong>”–&gt; 选择 “<strong>IIS 管理器</strong>”</p>
-<p><img src="../images/2019/20190320-004.png" alt="004"></p>
-<p>点击 <strong>IIS 服务器证书</strong></p>
-<p><img src="../images/2019/20190320-005.png" alt="005"></p>
-<p>FTP 界面上选择 “<strong>FTP 身份验证</strong>”——&gt;“<strong>基本身份验证</strong>”–&gt;” 启用”</p>
-<p><img src="../images/2019/20190320-006.png" alt="006"></p>
-<p>FTP 界面选择 “<strong>FTP 授权规则</strong> “—&gt; 右侧 “<strong>添加允许规则</strong>”–&gt; 选择 “<strong>指定的角色或用户组</strong>”, 以及权限选择，“<strong>读取 写入</strong></p>
-<p><img src="../images/2019/20190320-007.png" alt="007"></p>
-<p>完成所有前戏后，接下来就开始进行建立 FTP 网站，点击 IIS 管理器界面 “<strong>网站</strong>”，点击右侧添加 “<strong>FTP 站点</strong>”，FTP 站点名称可以任意取，内容目录为服务器上提供上传、下载文件保存目录。</p>
-<p><img src="../images/2019/20190320-008.png" alt="008"></p>
-<p>点击 “<strong>下一步</strong>” 绑定 IP 可以选取指定 IP，也可以默认，端口号默认 21，勾选下面 “<strong>自动启动 FTP 站点</strong>” 导入刚才建立的 SSL 证书</p>
-<p><img src="../images/2019/20190320-009.png" alt="009"></p>
-<p>点击 “<strong>下一步</strong>” 身份验证和授权信息配置</p>
-<p><img src="../images/2019/20190320-010.png" alt="010"></p>
-<p>配置完成（浏览器和 FTP 客户端软件上登陆）</p>
-<figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ftp://<span class="title">ip</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"># 提示输入账户密码</span></span><br></pre></td></tr></tbody></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
@@ -1380,13 +1365,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">18k</span>
+    <span title="Symbols count total">21k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">17 mins.</span>
+    <span title="Reading time total">19 mins.</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>

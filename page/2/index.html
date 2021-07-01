@@ -133,20 +133,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -192,6 +192,123 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/28/16-52-20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ssshier">
+      <meta itemprop="description" content="Python, Java, Linux。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="三思十二">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2019/09/28/16-52-20/" class="post-title-link" itemprop="url">Windows Server 2012 R2 FTP Server</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2019-09-28 16:52:20" itemprop="dateCreated datePublished" datetime="2019-09-28T16:52:20+08:00">2019-09-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Windows/" itemprop="url" rel="index"><span itemprop="name">Windows</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>441</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>打开 Windows Server 2012 R2 <strong>服务器管理器界面</strong>  添加角色和功能</p>
+<p><img src="../images/2019/20190320-001.png" alt="001"></p>
+<p>添加角色和功能向导里，选择 从<strong>服务器池中选择服务器</strong></p>
+<p><img src="../images/2019/20190320-002.png" alt="002"></p>
+<p>选择 Web 服务器（IIS）<strong>安装 FTP 服务器</strong></p>
+<p><img src="../images/2019/20190320-003.png" alt="003"></p>
+<p>安装完成后，在服务器管理器右上角有个点击 “<strong>工具</strong>”–&gt; 选择 “<strong>IIS 管理器</strong>”</p>
+<p><img src="../images/2019/20190320-004.png" alt="004"></p>
+<p>点击 <strong>IIS 服务器证书</strong></p>
+<p><img src="../images/2019/20190320-005.png" alt="005"></p>
+<p>FTP 界面上选择 “<strong>FTP 身份验证</strong>”——&gt;“<strong>基本身份验证</strong>”–&gt;” 启用”</p>
+<p><img src="../images/2019/20190320-006.png" alt="006"></p>
+<p>FTP 界面选择 “<strong>FTP 授权规则</strong> “—&gt; 右侧 “<strong>添加允许规则</strong>”–&gt; 选择 “<strong>指定的角色或用户组</strong>”, 以及权限选择，“<strong>读取 写入</strong></p>
+<p><img src="../images/2019/20190320-007.png" alt="007"></p>
+<p>完成所有前戏后，接下来就开始进行建立 FTP 网站，点击 IIS 管理器界面 “<strong>网站</strong>”，点击右侧添加 “<strong>FTP 站点</strong>”，FTP 站点名称可以任意取，内容目录为服务器上提供上传、下载文件保存目录。</p>
+<p><img src="../images/2019/20190320-008.png" alt="008"></p>
+<p>点击 “<strong>下一步</strong>” 绑定 IP 可以选取指定 IP，也可以默认，端口号默认 21，勾选下面 “<strong>自动启动 FTP 站点</strong>” 导入刚才建立的 SSL 证书</p>
+<p><img src="../images/2019/20190320-009.png" alt="009"></p>
+<p>点击 “<strong>下一步</strong>” 身份验证和授权信息配置</p>
+<p><img src="../images/2019/20190320-010.png" alt="010"></p>
+<p>配置完成（浏览器和 FTP 客户端软件上登陆）</p>
+<figure class="highlight bat"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ftp://<span class="title">ip</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"># 提示输入账户密码</span></span><br></pre></td></tr></tbody></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/28/16-41-18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -223,7 +340,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
+        <time title="Modified: 2021-07-01 20:02:12" itemprop="dateModified" datetime="2021-07-01T20:02:12+08:00">2021-07-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -594,13 +711,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">18k</span>
+    <span title="Symbols count total">21k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">17 mins.</span>
+    <span title="Reading time total">19 mins.</span>
   </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>

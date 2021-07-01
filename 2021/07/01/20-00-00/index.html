@@ -20,29 +20,29 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ssshier.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script><script src="/js/config.js"></script>
-<meta name="description" content="type 关键字定义类型 12345678910111213141516&#x2F;&#x2F; 定义新的类型type myint inttype mystr string&#x2F;&#x2F; 定义函数类型type myfun func(int, int)(string)func fun1()myfun{}&#x2F;&#x2F; 类型别名type bieming &#x3D; Type&#x2F;&#x2F; 别名不能添加本地方法，除非使用type定义新的类型（不使用等号）&#x2F;&#x2F;">
+<meta name="description" content="Install on macOS12345# https:&#x2F;&#x2F;minikube.sigs.k8s.io&#x2F;docs&#x2F;start&#x2F;brew install kubectlbrew install minikubekubectl version --clientminikube version    123456789101112131415minikube start --driver&#x3D;virtual">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Golang 基础语法之六">
-<meta property="og:url" content="https://ssshier.github.io/2019/09/30/10-58-32/index.html">
+<meta property="og:title" content="K8S">
+<meta property="og:url" content="https://ssshier.github.io/2021/07/01/20-00-00/index.html">
 <meta property="og:site_name" content="三思十二">
-<meta property="og:description" content="type 关键字定义类型 12345678910111213141516&#x2F;&#x2F; 定义新的类型type myint inttype mystr string&#x2F;&#x2F; 定义函数类型type myfun func(int, int)(string)func fun1()myfun{}&#x2F;&#x2F; 类型别名type bieming &#x3D; Type&#x2F;&#x2F; 别名不能添加本地方法，除非使用type定义新的类型（不使用等号）&#x2F;&#x2F;">
+<meta property="og:description" content="Install on macOS12345# https:&#x2F;&#x2F;minikube.sigs.k8s.io&#x2F;docs&#x2F;start&#x2F;brew install kubectlbrew install minikubekubectl version --clientminikube version    123456789101112131415minikube start --driver&#x3D;virtual">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-09-30T02:58:32.000Z">
-<meta property="article:modified_time" content="2021-06-29T15:43:22.846Z">
+<meta property="article:published_time" content="2021-07-01T12:00:00.000Z">
+<meta property="article:modified_time" content="2021-07-01T12:05:50.032Z">
 <meta property="article:author" content="ssshier">
-<meta property="article:tag" content="Golang">
-<meta property="article:tag" content="Golang Days">
+<meta property="article:tag" content="Minikube">
+<meta property="article:tag" content="K8S">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://ssshier.github.io/2019/09/30/10-58-32/">
+<link rel="canonical" href="https://ssshier.github.io/2021/07/01/20-00-00/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ssshier.github.io&#x2F;2019&#x2F;09&#x2F;30&#x2F;10-58-32&#x2F;&quot;,&quot;path&quot;:&quot;2019&#x2F;09&#x2F;30&#x2F;10-58-32&#x2F;&quot;,&quot;title&quot;:&quot;Golang 基础语法之六&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ssshier.github.io&#x2F;2021&#x2F;07&#x2F;01&#x2F;20-00-00&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;07&#x2F;01&#x2F;20-00-00&#x2F;&quot;,&quot;title&quot;:&quot;K8S&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>Golang 基础语法之六 | 三思十二</title>
+<title>K8S | 三思十二</title>
   
 
 
@@ -123,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#type%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.</span> <span class="nav-text">type 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">错误处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%94%99%E8%AF%AF"><span class="nav-number">2.1.</span> <span class="nav-text">创建错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">错误类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%99%E8%AF%AF"><span class="nav-number">2.3.</span> <span class="nav-text">自定义错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#panic%E5%92%8Crecover"><span class="nav-number">2.4.</span> <span class="nav-text">panic 和 recover</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-on-macOS"><span class="nav-number">1.</span> <span class="nav-text">Install on macOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-tag"><span class="nav-number">2.</span> <span class="nav-text">Docker tag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-service"><span class="nav-number">3.</span> <span class="nav-text">Create service</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -197,7 +197,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2019/09/30/10-58-32/">
+    <link itemprop="mainEntityOfPage" href="https://ssshier.github.io/2021/07/01/20-00-00/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Golang 基础语法之六
+          K8S
         </h1>
 
         <div class="post-meta-container">
@@ -220,23 +220,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2019-09-30 10:58:32" itemprop="dateCreated datePublished" datetime="2019-09-30T10:58:32+08:00">2019-09-30</time>
+      <time title="Created: 2021-07-01 20:00:00 / Modified: 20:05:50" itemprop="dateCreated datePublished" datetime="2021-07-01T20:00:00+08:00">2021-07-01</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-06-29 23:43:22" itemprop="dateModified" datetime="2021-06-29T23:43:22+08:00">2021-06-29</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Golang/" itemprop="url" rel="index"><span itemprop="name">Golang</span></a>
+          <a href="/categories/K8S/" itemprop="url" rel="index"><span itemprop="name">K8S</span></a>
         </span>
     </span>
 
@@ -248,14 +242,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>622</span>
+      <span>2.4k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
+      <span>2 mins.</span>
     </span>
 </div>
 
@@ -266,34 +260,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="type关键字"><a href="#type关键字" class="headerlink" title="type关键字"></a>type 关键字</h2><p>定义类型</p>
-<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义新的类型</span></span><br><span class="line"><span class="keyword">type</span> myint <span class="keyword">int</span></span><br><span class="line"><span class="keyword">type</span> mystr <span class="keyword">string</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义函数类型</span></span><br><span class="line"><span class="keyword">type</span> myfun <span class="function"><span class="keyword">func</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span><span class="params">(<span class="keyword">string</span>)</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fun1</span><span class="params">()</span><span class="title">myfun</span></span>{</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 类型别名</span></span><br><span class="line"><span class="keyword">type</span> bieming = Type</span><br><span class="line"></span><br><span class="line"><span class="comment">// 别名不能添加本地方法，除非使用type定义新的类型（不使用等号）</span></span><br><span class="line"><span class="comment">// 别名嵌套注意混淆</span></span><br></pre></td></tr></tbody></table></figure>
+        <h2 id="Install-on-macOS"><a href="#Install-on-macOS" class="headerlink" title="Install on macOS"></a>Install on macOS</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> https://minikube.sigs.k8s.io/docs/start/</span></span><br><span class="line">brew install kubectl</span><br><span class="line">brew install minikube</span><br><span class="line">kubectl version --client</span><br><span class="line">minikube version</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><h3 id="创建错误"><a href="#创建错误" class="headerlink" title="创建错误"></a>创建错误</h3><figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> {</span><br><span class="line">    log.Fatal(err)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<ul>
-<li>使用 errors 包的 New 函数创建错误</li>
-<li>使用 fmt 包下的 Errorf 函数创建错误</li>
-</ul>
-<h3 id="错误类型"><a href="#错误类型" class="headerlink" title="错误类型"></a>错误类型</h3><p>断言，然后获取错误信息</p>
-<p>错误不要忽略</p>
-<h3 id="自定义错误"><a href="#自定义错误" class="headerlink" title="自定义错误"></a>自定义错误</h3><p>实现 <code>error</code> 接口，实现方式如文档五所示</p>
-<h3 id="panic和recover"><a href="#panic和recover" class="headerlink" title="panic和recover"></a>panic 和 recover</h3><p>panic 恐慌</p>
-<p>恐慌后的代码不执行，已经 defer 的代码会执行</p>
-<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">funcA</span><span class="params">()</span></span> {</span><br><span class="line">    fmt.Println(<span class="string">"a"</span>)</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">funcB</span><span class="params">()</span></span> {</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
 
-<p>recover</p>
-<p>捕获 panic</p>
-<figure class="highlight go"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> {</span><br><span class="line">    <span class="keyword">if</span> msg := <span class="built_in">recover</span>; msg!=<span class="literal">nil</span> {</span><br><span class="line">        fmt.Println(<span class="string">"恢复主函数"</span>)</span><br><span class="line">    }</span><br><span class="line">}()</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">minikube start --driver=virtualbox --image-mirror-country cn --image-repository=registry.cn-hangzhou.aliyuncs.com/google_containers</span><br><span class="line">minikube status</span><br><span class="line">minikube dashboard</span><br><span class="line"></span><br><span class="line">kubectl get pods --all-namespaces</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> describe</span></span><br><span class="line">kubectl describe pods dashboard-metrics-scraper-8554f74445-qcf2t -n kubernetes-dashboard</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> minikube dashboard 503</span></span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/storage-provisioner:v4 registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-minikube/storage-provisioner:v4</span><br><span class="line"></span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/metrics-scraper:v1.0.4 registry.cn-hangzhou.aliyuncs.com/google_containers/kubernetesui/metrics-scraper:v1.0.4</span><br><span class="line"></span><br><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/dashboard:v2.1.0 registry.cn-hangzhou.aliyuncs.com/google_containers/kubernetesui/dashboard:v2.1.0</span><br></pre></td></tr></tbody></table></figure>
 
-<p>适合 panic 场景：</p>
-<ul>
-<li>空指针引用</li>
-<li>下标越界</li>
-<li>除数为 0</li>
-<li> 不应该出现的分支，比如 default</li>
-<li> 输入不应该引起函数错误</li>
-</ul>
+
+
+<h2 id="Docker-tag"><a href="#Docker-tag" class="headerlink" title="Docker tag"></a>Docker tag</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hongdada/p/11395200.html">https://www.cnblogs.com/hongdada/p/11395200.html</a></p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">MY_REGISTRY=gcr.azk8s.cn/google-containers</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> pull image</span></span><br><span class="line">docker pull ${MY_REGISTRY}/kube-apiserver:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/kube-controller-manager:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/kube-scheduler:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/kube-proxy:v1.15.1</span><br><span class="line">docker pull ${MY_REGISTRY}/pause:3.1</span><br><span class="line">docker pull ${MY_REGISTRY}/etcd:3.3.10</span><br><span class="line">docker pull ${MY_REGISTRY}/coredns:1.3.1</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> tag</span></span><br><span class="line">docker tag ${MY_REGISTRY}/kube-apiserver:v1.15.1 k8s.gcr.io/kube-apiserver:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/kube-controller-manager:v1.15.1 k8s.gcr.io/kube-controller-manager:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/kube-scheduler:v1.15.1 k8s.gcr.io/kube-scheduler:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/kube-proxy:v1.15.1 k8s.gcr.io/kube-proxy:v1.15.1</span><br><span class="line">docker tag ${MY_REGISTRY}/pause:3.1 k8s.gcr.io/pause:3.1</span><br><span class="line">docker tag ${MY_REGISTRY}/etcd:3.3.10 k8s.gcr.io/etcd:3.3.10</span><br><span class="line">docker tag ${MY_REGISTRY}/coredns:1.3.1 k8s.gcr.io/coredns:1.3.1</span><br><span class="line"><span class="meta"> </span></span><br><span class="line"><span class="meta">#</span><span class="bash"> delete</span></span><br><span class="line">docker images | grep ${MY_REGISTRY} | awk '{print "docker rmi "  $1":"$2}' | sh -x</span><br><span class="line"></span><br><span class="line">echo "end"</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Create-service"><a href="#Create-service" class="headerlink" title="Create service"></a>Create service</h2><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kubectl create deployment hello-nginx --image=nginx --port=80</span><br><span class="line">kubectl expose deployment hello-nginx --type=NodePort --port=80</span><br><span class="line">kubectl get services hello-nginx</span><br><span class="line">minikube service hello-nginx</span><br><span class="line"></span><br><span class="line">kubectl delete services hello-nginx</span><br><span class="line">kubectl delete deployment hello-nginx</span><br></pre></td></tr></tbody></table></figure>
+
 
     </div>
 
@@ -311,7 +290,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://ssshier.github.io/2019/09/30/10-58-32/" title="Golang 基础语法之六">https://ssshier.github.io/2019/09/30/10-58-32/</a>
+      <a href="https://ssshier.github.io/2021/07/01/20-00-00/" title="K8S">https://ssshier.github.io/2021/07/01/20-00-00/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -337,22 +316,19 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Golang/" rel="tag"># Golang</a>
-              <a href="/tags/Golang-Days/" rel="tag"># Golang Days</a>
+              <a href="/tags/Minikube/" rel="tag"># Minikube</a>
+              <a href="/tags/K8S/" rel="tag"># K8S</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/09/29/17-03-35/" rel="prev" title="Golang 基础语法之五">
-                  <i class="fa fa-chevron-left"></i> Golang 基础语法之五
+                <a href="/2019/10/08/20-27-17/" rel="prev" title="Linux-CentOS7 Install MySQL5.7">
+                  <i class="fa fa-chevron-left"></i> Linux-CentOS7 Install MySQL5.7
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/10/03/15-33-33/" rel="next" title="Golang 进阶实战之 IO 操作">
-                  Golang 进阶实战之 IO 操作 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
